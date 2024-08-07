@@ -1,0 +1,35 @@
+= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i', media: 'all'
+= stylesheet_link_tag 'mmenu', media: 'all', 'data-turbolinks-track': 'reload'
+= stylesheet_link_tag 'mmenu.positioning', media: 'all', 'data-turbolinks-track': 'reload'
+= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track': 'reload'
+= tag(:link, rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css", integrity: "sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==", crossorigin: "anonymous", referrerpolicy: "no-referrer")
+link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"
+section.sign-in
+  .container
+    .row
+        .col-md-6.signin-image
+            figure(style="text-align: center;")
+            = image_tag "signin-image.jpg", alt: "Sign Up Image", class: "signin-img"
+            a.signup-image-link href=new_user_registration_path Create an account
+
+        .col-md-6.signin-form
+            h2.form-title Sign In
+            = form_with url: user_session_path, method: :post, class: "register-form", id: "login-form" do
+            .form-group
+                label for="user_email"
+                i.zmdi.zmdi-account.material-icons-name
+                = email_field_tag :email, nil, id: "user_email", placeholder: "Your Email", class: "form-control"
+
+            .form-group
+                label for="user_password"
+                i.zmdi.zmdi-lock
+                = password_field_tag :password, nil, id: "user_password", placeholder: "Password", class: "form-control"
+
+            .form-group
+                = check_box_tag :remember_me, '1', false, id: "remember-me", class: "agree-term"
+                = label_tag :remember_me, class: "label-agree-term" do
+                span Remember me
+
+            .form-group.form-button
+                = submit_tag "Log in", class: "form-submit", id: "signin"

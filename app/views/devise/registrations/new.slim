@@ -1,0 +1,33 @@
+section.signup
+  .container
+    .row
+      .col-md-6.signup-form
+        h2.form-title Sign Up
+        = form_with url: user_registration_path, method: :post, class: "register-form", id: "register-form", local: true do |f|
+          .form-group
+            label for="user_name"
+              i.zmdi.zmdi-account.material-icons-name
+            = f.text_field :name, id: "user_name", placeholder: "Your Name", class: "form-control"
+
+          .form-group
+            label for="user_email"
+              i.zmdi.zmdi-email
+            = f.email_field :email, id: "user_email", placeholder: "Your Email", class: "form-control"
+
+          .form-group
+            label for="user_pass"
+              i.zmdi.zmdi-lock
+            = f.password_field :password, id: "user_pass", placeholder: "Password", class: "form-control"
+
+          .form-group
+            label for="user_re_pass"
+              i.zmdi.zmdi-lock-outline
+            = f.password_field :password_confirmation, id: "user_re_pass", placeholder: "Repeat your password", class: "form-control"
+
+          .form-group.form-button
+            = f.submit "Register", class: "form-submit btn btn-primary", id: "signup"
+
+      .col-md-6.signup-image
+        figure
+          = image_tag "signup-image.jpg", alt: "Sign Up Image", class: "img-fluid"
+        a.signup-image-link href=new_user_session_path I am already a member

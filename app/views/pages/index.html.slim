@@ -1,0 +1,378 @@
+doctype html
+html[lang="zxx"]
+  head
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1"]
+    title
+      | ..:: LIBRARIA ::..
+    = favicon_link_tag 'favicon.ico'
+
+
+
+  body.layout-v2
+    header#header.navbar-wrapper
+      .container
+        .row
+      / ---------------------------crousel--------------------------------
+    #home-v1-header-carousel.carousel.slide[data-ride="carousel" data-interval="2000"]
+      .carousel-inner
+        .carousel-item.active
+          figure
+            = image_tag "header-slider/home-v2/header-slide.jpg", class: "d-block w-100", alt: "Library Management System"
+          .container
+            .carousel-caption
+              h3 Welcome to the Library Management System!
+              h2 Streamline Your Library Operations
+              p Manage your library’s inventory, patrons, and transactions with ease. Our system offers a comprehensive solution for efficient library management, ensuring that every book and user is accounted for.
+        .carousel-item
+          figure
+            = image_tag "header-slider/home-v2/header-slide.jpg", class: "d-block w-100", alt: "Efficient Management"
+          .container
+            .carousel-caption
+              h3 Effortless Book Management
+              h2 Keep Track of Your Collection
+              p From cataloging new arrivals to tracking book loans and returns, our system simplifies every aspect of book management, helping you keep your library organized and accessible.
+              .slide-buttons.hidden-sm.hidden-xs
+                a.btn.btn-primary[href="#"] Learn More
+                a.btn.btn-default[href="#"] Get Started
+        .carousel-item
+          figure
+            = image_tag "header-slider/home-v2/header-slide.jpg", class: "d-block w-100", alt: "User-Friendly Interface"
+          .container
+            .carousel-caption
+              h3 User-Friendly Interface
+              h2 Intuitive and Accessible
+              p Designed with ease of use in mind, our system offers an intuitive interface for both staff and patrons. Enjoy a seamless experience as you navigate through your library’s features and functionalities.
+              .slide-buttons.hidden-sm.hidden-xs
+                a.btn.btn-primary[href="#"] Explore Features
+                a.btn.btn-default[href="#"] Contact Us
+      ol.carousel-indicators
+        li.active[data-target="#home-v1-header-carousel" data-slide-to="0"]
+        li[data-target="#home-v1-header-carousel" data-slide-to="1"]
+        li[data-target="#home-v1-header-carousel" data-slide-to="2"]
+
+    / ---------------------------category features --------------------------------
+    section.features
+      ul.list-unstyled.d-flex.flex-row
+        li.bg-yellow-400
+          .feature-box
+            i.yellow.fa.fa-child.fa-2x
+            h3 style="color: black;" Kids
+            p Explore our collection of engaging books and media designed for children of all ages.
+            a.black[href="#"]
+              | View Selection  
+              |
+              i.fa.fa-long-arrow-right
+
+        li.bg-green-400
+          .feature-box
+            i.light-green.fa.fa-ghost.fa-2x
+            h3 style="color: black;" Horror
+            p Dive into our collection of spine-chilling horror stories and thrillers.
+            a.black[href="#"]
+              | View Selection  
+              i.fa.fa-long-arrow-right
+
+        li.bg-blue-400
+          .feature-box
+            i.blue.fa.fa-film.fa-2x
+            h3 style="color: black;" Comedy
+            p Enjoy a selection of humorous books and films that are sure to make you laugh.
+            a.black[href="#"]
+              | View Selection  
+              i.fa.fa-long-arrow-right
+
+        li.bg-red-400
+          .feature-box
+            i.red.fa.fa-book.fa-2x
+            h3 style="color: black;" Romance
+            p Browse our collection of romance novels and heartwarming stories.
+            a.black[href="#"]
+              | View Selection  
+              i.fa.fa-long-arrow-right
+
+        li.bg-indigo-400
+          .feature-box
+            i.violet.fa.fa-search.fa-2x
+            h3 style="color: black;" Mystery
+            p Discover intriguing mysteries and detective stories that will keep you guessing.
+            a.black[href="#"]
+              | View Selection  
+              i.fa.fa-long-arrow-right
+  
+      
+  / ---------------------------category filter --------------------------------
+
+
+
+    / ---------------------------welcome section --------------------------------
+  section.welcome-section
+    .container
+      .row
+        .col-md-6
+          .welcome-wrap
+            .welcome-text
+              h2.section-title
+                | Welcome to the LBMS
+              span.underline.left
+              p
+                | Welcome to the Library Book Management System (LBMS), where we offer an extensive collection of books and resources for every reader. Our platform allows you to explore a wide range of genres and categories, ensuring that you'll find something that piques your interest. Whether you're a student, researcher, or casual reader, LBMS is designed to make your library experience seamless and enjoyable.
+                | 
+                | From classic literature to modern bestsellers, our system is built to provide easy access to all your favorite reads. With advanced search features and personalized recommendations, finding your next book is just a click away. Join us as we revolutionize the way you interact with your library resources.
+              a.btn.btn-primary[href="#"]
+                | Learn More
+        .col-md-6
+          .welcome-image
+            = image_tag "wellcome-image.jpg", class: "align-right", alt: "Library Welcome Image"
+  
+  br
+  br
+
+    / ---------------------------newsletter section --------------------------------
+  
+  section.newsletter-section(style="background-color: black; color: white;")
+    .container
+      .row
+        .col-md-8.col-md-offset-2
+          .center-content
+            h2.white
+              | Subscribe to Our Newsletter
+            span.underline.center
+            p.white
+              | Stay updated with the latest news, events, and updates from LBMS. Subscribe to our newsletter to receive curated content directly to your inbox. We promise to deliver valuable insights and updates that will enhance your reading experience.
+          .form-group
+            input#newsletter.form-control(placeholder="Enter your Email!" name="newsletter" type="email")
+            input.form-control(value="Subscribe" type="submit" style="background-color: orange; color: white;")
+
+    / ---------------------------Meet my staff --------------------------------
+  section.meet-staff-box.section-padding
+        .container-fluid
+          .row
+            .center-content
+              h2.section-title
+                | Meet Our Staff
+              span.underline.center
+              p.lead
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .staff-list
+              .staff-member
+                figure
+                  =image_tag "team-img-04.jpg" ,alt:"team"
+                .content-block
+                  .staff-info
+                    h4
+                      | David J. Seleb
+                    span.designation
+                      | Executive Director
+                    ul.social
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-linkedin
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-facebook-f
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-twitter
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-skype
+                    p
+                      | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content...
+                    a.btn.btn-primary[href="#"]
+                      | Read More
+              .staff-member
+                figure
+                  = image_tag "team-img-05.jpg", alt: "team"
+                .content-block
+                  .staff-info
+                    h4
+                      | Robert Simmons
+                    span.designation
+                      | Deputy Director
+                    ul.social
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-linkedin
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-facebook-f
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-twitter
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-skype
+                    p
+                      | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content...
+                    a.btn.btn-primary[href="#"]
+                      | Read More
+              .staff-member
+                figure
+                  = image_tag "team-img-06.jpg",alt:"team"
+                .content-block
+                  .staff-info
+                    h4
+                      | Anna Delpan
+                    span.designation
+                      | Librarian
+                    ul.social
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-linkedin
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-facebook-f
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-twitter
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-skype
+                    p
+                      | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content...
+                    a.btn.btn-primary[href="#"]
+                      | Read More
+              .staff-member
+                figure
+                  =image_tag "team-img-07.jpg",alt:"team"
+                .content-block
+                  .staff-info
+                    h4
+                      | Anna Delpan
+                    span.designation
+                      | Librarian
+                    ul.social
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-linkedin
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-facebook-f
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-twitter
+                      li
+                        a[href="#" target="_blank"]
+                          i.fa.fa-skype
+                    p
+                      | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content...
+                    a.btn.btn-primary[href="#"]
+                      | Read More
+   
+        
+footer.site-footer
+  .container
+    #footer-widgets
+      .row
+        .col-md-2.widget-container
+          .widget.widget_social_icons
+            ul
+              li
+                a.facebook[href="#" target="_blank"]
+                 i.fa-brands.fa-facebook-messenger.fa-4x.white-icon.mt-2
+              li
+                a.twitter[href="#" target="_blank"]
+                  i.fa-brands.fa-twitter.fa-4x.white-icon.mt-2
+              li
+                a.google[href="#" target="_blank"]
+                  i.fa-brands.fa-google.fa-4x.white-icon.mt-2
+              li
+                a.rss[href="#" target="_blank"]
+                  i.fa-brands.fa-github.fa-4x.white-icon.mt-2
+              li
+                a.linkedin[href="#" target="_blank"]
+                  i.fa-brands.fa-linkedin.fa-4x.white-icon.mt-2
+              li
+                a.youtube[href="#" target="_blank"]
+                  i.fa-brands.fa-youtube.fa-4x.white-icon.mt-2
+        .col-md-3.col-sm-6.widget-container
+          #text-2.widget.widget_text
+            h3.footer-widget-title
+              | About Libraria
+            span.underline.left
+            .textwidget
+              | It is a long established fact that a reader will be distracted by the readable content of a page when looking. 
+            address
+              .info
+                i.fa.fa-location-arrow
+                span
+                  | 21 King Street, Melbourne, Victoria 3000 Australia
+              .info
+                i.fa.fa-envelope
+                span
+                  a[href="mailto:support@libraria.com"]
+                    | support@libraria.com
+              .info
+                i.fa.fa-phone
+                span
+                  a[href="tel:012-345-6789"]
+                    | + 012-345-6789
+        .col-md-2.col-sm-6.widget-container
+          #nav_menu-2.widget.widget_nav_menu
+            h3.footer-widget-title
+              | Quick Links
+            span.underline.left
+            .menu-quick-links-container
+              ul#menu-quick-links.menu
+                li
+                  a[href="#"]
+                    | Library News
+                li
+                  a[href="#"]
+                    | History
+                li
+                  a[href="#"]
+                    | Meet Our Staff
+                li
+                  a[href="#"]
+                    | Board of Trustees
+                li
+                  a[href="#"]
+                    | Budget
+                li
+                  a[href="#"]
+                    | Annual Report
+        .clearfix.hidden-lg.hidden-md.hidden-xs.tablet-margin-bottom
+        .col-md-2.col-sm-6.widget-container
+          #text-4.widget.widget_text
+            h3.footer-widget-title
+              | Timing
+            span.underline.left
+            .timming-text-widget
+              time[datetime="2017-02-13"]
+                | Mon - Thu: 9 am - 9 pm
+              time[datetime="2017-02-13"]
+                | Fri: 9 am - 6 pm
+              time[datetime="2017-02-13"]
+                | Sat: 9 am - 5 pm
+              time[datetime="2017-02-13"]
+                | Sun: 1 pm - 6 pm
+              ul
+                li
+                  a[href="#"]
+                    | Closings
+                li
+                  a[href="#"]
+                    | Branches
+        .col-md-3.col-sm-6.widget-container
+          .widget.twitter-widget
+            h3.footer-widget-title
+              | Latest Tweets
+            span.underline.left
+            #twitter-feed
+              ul
+                li
+                  p
+                    a[href="#"]
+                      | @TemplateLibraria
+                    | Sed ut perspiciatis unde sit voluptatem. 
+                    a[href="#"]
+                      | template-libraria.com
+                li
+                  p
+                    a[href="#"]
+                      | @TemplateLibraria
+                    | Sed ut perspiciatis unde sit voluptatem. 
+                    a[href="#"]
+                      | template-libraria.com

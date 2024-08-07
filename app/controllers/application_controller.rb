@@ -1,3 +1,5 @@
 class ApplicationController < ActionController::Base
-    protect_from_forgery with: :null_session, if: -> { request.format.json? }
+    def index
+        render 'pages/index'  
+    end
 end
