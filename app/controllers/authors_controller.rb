@@ -1,51 +1,48 @@
 class AuthorsController < ApplicationController
-    before_action :set_author, only: [:show, :update, :destroy]
-  
-    # GET /authors
-    def index
-      @authors = Author.all
-      render json: @authors
-    end
-  
-    # GET /authors/:id
-    def show
-      render json: @author
-    end
-  
-    # POST /authors
-    def create
-      @author = Author.new(author_params)
-  
-      if @author.save
-        render json: @author, status: :created
-      else
-        render json: @author.errors, status: :unprocessable_entity
-      end
-    end
-  
-    # PATCH/PUT /authors/:id
-    def update
-      if @author.update(author_params)
-        render json: @author
-      else
-        render json: @author.errors, status: :unprocessable_entity
-      end
-    end
-  
-    # DELETE /authors/:id
-    def destroy
-      @author.destroy
-      head :no_content
-    end
-  
-    private
-  
-    def set_author
-      @author = Author.find(params[:id])
-    end
-  
-    def author_params
-      params.require(:author).permit(:name, :bio)
+  def index
+    @authors = Author.all
+  end
+
+  def show
+    @author = Author.find(params[:id])
+  end
+
+  def new
+    @author = Author.new
+  end
+
+  def create
+    @author = Author.new(author_params)
+
+    if @author.save
+      redirect_to authors_path, notice: 'Author was successfully created.'
+    else
+      render :new
     end
   end
-  
+
+  def edit
+    @author = Author.find(params[:id])
+  end
+
+  def update
+    @author = Author.find(params[:id])
+    if @author.update(author_params)
+      redirect_to authors_path, notice: 'Author was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @author = Author.find(params[:id])
+    @author.destroy
+    redirect_to authors_path, notice: 'Author was successfully deleted.'
+  end
+
+  private
+
+  def author_params
+    params.require(:author).permit(:name, :bio)
+  end
+end

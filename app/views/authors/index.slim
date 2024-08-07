@@ -1,0 +1,19 @@
+h1 Authors
+
+= link_to 'New Author', new_author_path, class: 'btn btn-success'
+
+table.table
+  thead
+    tr
+      th Name
+      th Bio
+      th Actions
+  tbody
+    - @authors.each do |author|
+      tr
+        td = author.name
+        td = author.bio
+        td
+          = link_to 'Show', author, class: 'btn btn-info'
+          = link_to 'Edit', edit_author_path(author), class: 'btn btn-warning'
+          = link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'

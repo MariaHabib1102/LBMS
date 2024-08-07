@@ -1,0 +1,8 @@
+h1 = @author.name
+
+p
+  strong Bio:
+  = @author.bio
+
+= link_to 'Edit', edit_author_path(@author), class: 'btn btn-warning'
+= link_to 'Back', authors_path, class: 'btn btn-secondary'

@@ -1,50 +1,48 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :update, :destroy]
-
-  # GET /books
   def index
     @books = Book.all
-    render json: @books
   end
 
-  # GET /books/:id
   def show
-    render json: @book
+    @book = Book.find(params[:id])
   end
 
-  # POST /books
+  def new
+    @book = Book.new
+  end
+
   def create
     @book = Book.new(book_params)
 
     if @book.save
-      render json: @book, status: :created
+      redirect_to books_path, notice: 'Book was successfully created.'
     else
-      render json: @book.errors, status: :unprocessable_entity
+      render :new
     end
   end
 
-  # PATCH/PUT /books/:id
+  def edit
+    @book = Book.find(params[:id])
+  end
+
   def update
+    @book = Book.find(params[:id])
     if @book.update(book_params)
-      render json: @book
+      redirect_to books_path, notice: 'Book was successfully updated.'
     else
-      render json: @book.errors, status: :unprocessable_entity
+      render :edit
     end
   end
 
-  # DELETE /books/:id
   def destroy
+    @book = Book.find(params[:id])
     @book.destroy
-    head :no_content
+    redirect_to books_path, notice: 'Book was successfully deleted.'
   end
 
   private
 
-  def set_book
-    @book = Book.find(params[:id])
-  end
-
   def book_params
-    params.require(:book).permit(:title, :author_id, :published_date, :genre, :cover_image)
+    params.require(:book).permit(:title, :description, :cover_image, :published_date, :author_id, :genre)
   end
 end
