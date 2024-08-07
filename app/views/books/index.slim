@@ -1,6 +1,6 @@
 h1 Books List
 
-= link_to 'New Book',  new_book_path, class: 'btn btn-primary'
+= link_to 'New Book', new_book_path, class: 'btn btn-primary'
 
 table.table
   thead
@@ -18,8 +18,11 @@ table.table
       tr
         td = book.title
         td = book.description
-        / td
-        /   = image_tag book.cover_image if book.cover_image.present?
+        td
+          - if book.cover_image.present?
+            = image_tag book.cover_image, size: "100x100", alt: book.title
+          - else
+            No image
         td = book.published_date.strftime('%B %d, %Y')
         td = book.genre
         td = book.author.name if book.author.present?
