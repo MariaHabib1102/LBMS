@@ -24,8 +24,11 @@ html
       a.navbar-brand href="#"
         = image_tag "logo.jpeg", width: "30", height: "30", alt: ""
 
-      / .ml-auto
-      /   = link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-logout"
+      .ml-auto
+  
+        = form_with url: destroy_user_session_path, method: :delete, html: { class: 'logout-form' } do |form|
+          = form.submit 'Sign out', class: 'btn btn-danger'
+
 
 
     == yield

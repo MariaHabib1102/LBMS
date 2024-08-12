@@ -15,7 +15,8 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
 
     if @book.save
-      redirect_to books_path, notice: 'Book was successfully created.'
+      ActionCable.server.broadcast 'book_channel', { title: @book.title, message: 'A new book was created' }
+      redirect_to books_path
     else
       render :new
     end

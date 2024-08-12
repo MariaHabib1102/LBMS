@@ -21,4 +21,3 @@ import "controllers"
 //= require main
 import Rails from "@rails/ujs";
 Rails.start();
-m

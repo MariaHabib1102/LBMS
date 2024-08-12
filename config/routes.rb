@@ -1,18 +1,19 @@
+# config/routes.rb
 Rails.application.routes.draw do
-  resources :books
-  resources :authors
-  # Set up Devise routes with default controllers
-  devise_for :users
-
   # Define the root path for authenticated users
-  authenticated :user do
-    root 'application#index', as: :authenticated_root
-  end
+
+  root 'application#index'
+
 
   # Define the root path for unauthenticated users
-  unauthenticated do
-    root 'devise/sessions#new', as: :unauthenticated_root
-  end
+  # unauthenticated :user do
+  #   root 'devise/sessions#new', as: :unauthenticated_root
+  # end
 
-  # Other routes...
+  # Devise routes
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+
+  resources :books
+  resources :authors
+  mount ActionCable.server => '/cable'
 end
