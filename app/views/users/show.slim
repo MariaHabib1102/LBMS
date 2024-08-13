@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    title User Profile
+  body
+    .container
+      h1 User Profile
+
+      .row
+        .col-md-6
+          h2 Basic Information
+          dl.dl-horizontal
+            dt Name:
+            dd = @user.name
+            dt Email:
+            dd = @user.email
+            dt Contact:
+            dd = @user.contact
+            dt Address:
+            dd = @user.address.present? ? @user.address : "No address provided"
+            dt Library Card Number:
+            dd = @user.library_card_number.present? ? @user.library_card_number : "No library card number assigned"
+
+        / .col-md-6
+        /   h2 Additional Information
+        /   dl.dl-horizontal
+        /     dt Role:
+        /     dd = @user.role.present? ? @user.role : "No role assigned"
+        /     dt Fees:
+        /     dd = @user.fees.present? ? number_to_currency(@user.fees) : "No fees assigned"
+
+      .mt-3
+        = link_to 'Edit Profile',   edit_user_path(@user), class: 'btn btn-primary'
+        /= link_to 'Back to Users List', users_path, class: 'btn btn-secondary'

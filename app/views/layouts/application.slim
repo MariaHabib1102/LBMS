@@ -11,8 +11,8 @@ html
     = stylesheet_link_tag 'mmenu.positioning', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track': 'reload'
 
-    = tag(:link, rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css", integrity: "sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==", crossorigin: "anonymous", referrerpolicy: "no-referrer")
-    = tag(:link, rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons")
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"
 
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'https://code.jquery.com/jquery-3.3.1.min.js', integrity: 'sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin: 'anonymous'
@@ -23,12 +23,12 @@ html
     .nav.navbar style="background-color: rgba(0, 0, 0, 0.8);"
       a.navbar-brand href="#"
         = image_tag "logo.jpeg", width: "30", height: "30", alt: ""
+    
 
       .ml-auto
-  
-        = form_with url: destroy_user_session_path, method: :delete, html: { class: 'logout-form' } do |form|
-          = form.submit 'Sign out', class: 'btn btn-danger'
-
-
+        - if current_user
+          = link_to 'Profile', user_path(current_user), class: 'btn btn-danger'
+          = form_with url: destroy_user_session_path, method: :delete, html: { class: 'logout-form d-inline' } do |form|
+            = form.submit 'Sign out', class: 'btn btn-danger'
 
     == yield

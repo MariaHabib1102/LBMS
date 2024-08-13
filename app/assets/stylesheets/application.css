@@ -19218,3 +19218,20 @@ a:focus {
 .bx-wrapper .bx-pager.bx-default-pager a.active {
   background: #ff7236;
 }
+.btn-custom {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.btn-custom.logout {
+  background-color: #dc3545;
+}

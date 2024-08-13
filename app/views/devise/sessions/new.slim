@@ -1,35 +1,46 @@
-= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i', media: 'all'
-= stylesheet_link_tag 'mmenu', media: 'all', 'data-turbolinks-track': 'reload'
-= stylesheet_link_tag 'mmenu.positioning', media: 'all', 'data-turbolinks-track': 'reload'
-= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track': 'reload'
-= tag(:link, rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css", integrity: "sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==", crossorigin: "anonymous", referrerpolicy: "no-referrer")
-link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"
-section.sign-in
-  .container
-    .row
-        .col-md-6.signin-image
-            figure(style="text-align: center;")
-            = image_tag "signin-image.jpg", alt: "Sign Up Image", class: "signin-img"
+doctype html
+html
+  head
+    title LBMS
+
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i', media: 'all'
+    = stylesheet_link_tag 'mmenu', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'mmenu.positioning', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css', integrity: 'sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==', crossorigin: 'anonymous', referrerpolicy: 'no-referrer'
+    = stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons'
+
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'https://code.jquery.com/jquery-3.3.1.min.js', integrity: 'sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin: 'anonymous'
+    = javascript_include_tag 'https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js', integrity: 'sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin: 'anonymous'
+    = javascript_include_tag 'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js', integrity: 'sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM', crossorigin: 'anonymous'
+
+  body
+    section.sign-in
+      .container
+        .row
+          .col-md-6.signin-image
+            figure style="text-align: center;"
+              = image_tag 'signin-image.jpg', alt: 'Sign Up Image', class: 'signin-img'
             a.signup-image-link href=new_user_registration_path Create an account
 
-        .col-md-6.signin-form
+          .col-md-6.signin-form
             h2.form-title Sign In
-            = form_with url: user_session_path, method: :post, class: "register-form", id: "login-form" do
-            .form-group
-                label for="user_email"
+            = form_for(resource, as: resource_name, url: session_path(resource_name), method: :post, class: 'register-form', id: 'login-form') do |form|
+              .form-group
+                = form.label :email, class: 'control-label'
                 i.zmdi.zmdi-account.material-icons-name
-                = email_field_tag :email, nil, id: "user_email", placeholder: "Your Email", class: "form-control"
+                = form.email_field :email, id: 'user_email', placeholder: 'Your Email', class: 'form-control'
 
-            .form-group
-                label for="user_password"
+              .form-group
+                = form.label :password, class: 'control-label'
                 i.zmdi.zmdi-lock
-                = password_field_tag :password, nil, id: "user_password", placeholder: "Password", class: "form-control"
+                = form.password_field :password, id: 'user_password', placeholder: 'Password', class: 'form-control'
 
-            .form-group
-                = check_box_tag :remember_me, '1', false, id: "remember-me", class: "agree-term"
-                = label_tag :remember_me, class: "label-agree-term" do
-                span Remember me
+              / .form-group
+              /   = form.check_box :remember_me, id: 'remember-me', class: 'agree-term'
+              /   = form.label :remember_me, class: 'label-agree-term'
+              /     span Remember me
 
-            .form-group.form-button
-                = submit_tag "Log in", class: "form-submit", id: "signin"
+              .form-group.form-button
+                = form.submit 'Log in', class: 'form-submit', id: 'signin'

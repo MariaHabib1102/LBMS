@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title Edit User Profile
+
+  body
+    .container
+      h1 Edit User Profile
+
+      = form_with model: @user, local: true do |form|
+        .row
+          .col-md-6
+            .form-group
+              = form.label :name, class: 'control-label'
+              = form.text_field :name, class: 'form-control', placeholder: 'Enter your name'
+
+            .form-group
+              = form.label :email, class: 'control-label'
+              = form.email_field :email, class: 'form-control', placeholder: 'Enter your email'
+
+            .form-group
+              = form.label :contact, class: 'control-label'
+              = form.text_field :contact, class: 'form-control', placeholder: 'Enter your contact number'
+
+            .form-group
+              = form.label :address, class: 'control-label'
+              = form.text_area :address, class: 'form-control', placeholder: 'Enter your address'
+
+            .form-group
+              = form.label :library_card_number, class: 'control-label'
+              = form.number_field :library_card_number, class: 'form-control', placeholder: 'Enter your library card number'
+
+        /   .col-md-6
+        /     .form-group
+        /       = form.label :role, class: 'control-label'
+        /       = form.text_field :role, class: 'form-control', placeholder: 'Enter your role'
+
+        /     .form-group
+        /       = form.label :fees, class: 'control-label'
+        /       = form.number_field :fees, step: '0.01', class: 'form-control', placeholder: 'Enter your fees'
+
+        .mt-3
+          = form.submit 'Update Profile', class: 'btn btn-primary'
+
