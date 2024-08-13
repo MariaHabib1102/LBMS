@@ -2,7 +2,7 @@
 class UsersController < ApplicationController
     before_action :set_user, only: [:show, :edit, :update]
   
-    before_create :generate_library_card_number
+ 
 
  
     def show
@@ -20,6 +20,10 @@ class UsersController < ApplicationController
         render :edit
       end
     end
+
+    def user_books
+        @user_books = current_user.books
+    end
   
     private
   
@@ -33,15 +37,6 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :contact, :address, :library_card_number, :role, :fees)
     end
 
-    def generate_library_card_number
-      loop do
-        self.library_card_number = generate_unique_number
-        break unless User.exists?(library_card_number: library_card_number)
-      end
-    end
-  
-    def generate_unique_number
-      format('%06d', rand(1..999999))
-    end
+
 end
   

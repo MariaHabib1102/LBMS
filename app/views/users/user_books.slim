@@ -1,0 +1,13 @@
+h1 My Books
+
+- if @user_books.present?
+  ul
+    - @user_books.each do |book|
+      li
+        strong = book.title
+
+
+- else
+  p You have no books in your collection.
+
+= link_to 'Back to Profile', user_path(current_user), class: 'btn btn-primary'
