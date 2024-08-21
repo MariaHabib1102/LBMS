@@ -14,14 +14,12 @@
   - Complexity (e.g., must include uppercase letters, lowercase letters, numbers, and special characters)
 - **User Role Assignment**: 
   - Student
-  - Faculty
+  - Admin
   - Staff
   - Librarian
 
 #### 1.2 User Login
-- **Authentication Methods**: 
-  - Username/Password
-  - Biometric (optional, e.g., fingerprint, face recognition)
+
 - **Password Recovery Options**: 
   - Forgot Password Link
   - Email Verification
@@ -30,7 +28,7 @@
 #### 1.3 User Profile Management
 - **View and Update Personal Information**:
   - View profile details
-  - Edit personal information (e.g., contact information, address)
+  - Edit personal information (e.g., contact information, address) --- email should not be editable
 - **Change Password Functionality**: 
   - Update password with current password verification
 
@@ -45,6 +43,8 @@
   - Publication Date
   - Edition
   - Number of Copies
+  -pdf
+  - number of likes
 - **Subject Categorization**: 
   - Fiction
   - Non-fiction

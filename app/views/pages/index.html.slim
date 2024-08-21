@@ -59,46 +59,41 @@ html[lang="zxx"]
             i.yellow.fa.fa-child.fa-2x
             h3 style="color: black;" Kids
             p Explore our collection of engaging books and media designed for children of all ages.
-            a.black[href="#"]
-              | View Selection  
-              |
-              i.fa.fa-long-arrow-right
+            = link_to "View Selection", genre_books_path('kids'), class: 'black'
+            i.fa.fa-long-arrow-right
+
 
         li.bg-green-400
           .feature-box
             i.light-green.fa.fa-ghost.fa-2x
             h3 style="color: black;" Horror
             p Dive into our collection of spine-chilling horror stories and thrillers.
-            a.black[href="#"]
-              | View Selection  
-              i.fa.fa-long-arrow-right
+            = link_to "View Selection", genre_books_path('horror'), class: 'black'
+            i.fa.fa-long-arrow-right
 
         li.bg-blue-400
           .feature-box
             i.blue.fa.fa-film.fa-2x
             h3 style="color: black;" Comedy
             p Enjoy a selection of humorous books and films that are sure to make you laugh.
-            a.black[href="#"]
-              | View Selection  
-              i.fa.fa-long-arrow-right
+            = link_to "View Selection", genre_books_path('comedy'), class: 'black'
+            i.fa.fa-long-arrow-right
 
         li.bg-red-400
           .feature-box
             i.red.fa.fa-book.fa-2x
             h3 style="color: black;" Romance
             p Browse our collection of romance novels and heartwarming stories.
-            a.black[href="#"]
-              | View Selection  
-              i.fa.fa-long-arrow-right
+            = link_to "View Selection", genre_books_path('romance'), class: 'black'
+            i.fa.fa-long-arrow-right
 
         li.bg-indigo-400
           .feature-box
             i.violet.fa.fa-search.fa-2x
             h3 style="color: black;" Mystery
             p Discover intriguing mysteries and detective stories that will keep you guessing.
-            a.black[href="#"]
-              | View Selection  
-              i.fa.fa-long-arrow-right
+            = link_to "View Selection", genre_books_path('mystery'), class: 'black'
+            i.fa.fa-long-arrow-right
   
       
   / ---------------------------category filter --------------------------------

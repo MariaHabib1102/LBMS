@@ -9,10 +9,14 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+
+
+
   end
 
   def create
     @book = Book.new(book_params)
+    @book.cover_image.attach(params[:book][:cover_image])
 
     if @book.save
       ActionCable.server.broadcast 'book_channel', { title: @book.title, message: 'A new book was created' }
@@ -22,12 +26,28 @@ class BooksController < ApplicationController
     end
   end
 
+  def show_genre
+        @genre = params[:genre]
+        allowed_genres = %w[kids horror comedy romance mystery]
+        if allowed_genres.include?(@genre)
+          @books = Book.where(genre: @genre.capitalize)
+          render 'books/index'
+        else
+          render plain: "Genre not found", status: :not_found
+        end
+      
+  end
+    
+
+
+
   def edit
     @book = Book.find(params[:id])
   end
 
   def update
     @book = Book.find(params[:id])
+    @book.cover_image.attach(params[:book][:cover_image]) 
     if @book.update(book_params)
       redirect_to books_path, notice: 'Book was successfully updated.'
     else

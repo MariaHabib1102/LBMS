@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   root 'application#index'
   resources :users, only: [:show, :edit, :update]
+  resources :books
+  resources :authors
   get 'user_books', to: 'users#user_books', as: 'user_books'
+  get '/books/genre/:genre', to: 'books#show_genre', as: 'genre_books'
+
 
   # Defines the root path route ("/")
   # root "posts#index"

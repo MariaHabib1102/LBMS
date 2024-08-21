@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_13_114159) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_21_074640) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -67,6 +67,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_13_114159) do
     t.integer "number_of_copies"
     t.float "amount"
     t.string "status"
+    t.integer "likes", default: 0, null: false
     t.index ["author_id"], name: "index_books_on_author_id"
   end
 

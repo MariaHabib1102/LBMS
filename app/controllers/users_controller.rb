@@ -1,16 +1,11 @@
 # app/controllers/users_controller.rb
 class UsersController < ApplicationController
     before_action :set_user, only: [:show, :edit, :update]
-  
- 
-
- 
+   
     def show
-      # The user is already set by the before_action
     end
   
     def edit
-      # The user is already set by the before_action
     end
   
     def update
@@ -36,7 +31,6 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :contact, :address, :library_card_number, :role, :fees)
     end
-
 
 end
   

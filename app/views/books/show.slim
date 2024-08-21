@@ -1,27 +1,98 @@
-h1 Book Details
-
-p
-  strong Title:
-  = @book.title
-
-p
-  strong Description:
-  = @book.description
-
-p
-  strong Cover Image:
-  = image_tag @book.cover_image if @book.cover_image.present?
-
-p
-  strong Published Date:
-  = @book.published_date.strftime('%B %d, %Y')
-p
-  strong Genre:
-  = @book.genre
-
-p
-  strong Author:
-  = @book.author.name if @book.author.present?
-
-= link_to 'Edit', edit_book_path(@book), class: 'btn btn-warning'
-= link_to 'Back', books_path, class: 'btn btn-secondary'
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+  <body>
+    #content.site-content
+      #primary.content-area
+        main.site-main
+          .booksmedia-detail-main
+            .container
+              .row
+                section.search-filters
+                  .container
+                    .filter-box
+                      h3 What are you looking for at the library?
+                      = form_tag 'http://libraria.demo.presstigers.com/index.html', method: :get do
+                        .col-md-4.col-sm-6
+                          .form-group
+                            label.sr-only for="keywords" Search by Keyword
+                            = text_field_tag :keywords, nil, class: 'form-control', placeholder: 'Search by Keyword'
+                        .col-md-3.col-sm-6
+                          .form-group
+                            = select_tag :catalog, options_for_select(['Search the Catalog', 'Catalog 01', 'Catalog 02', 'Catalog 03', 'Catalog 04', 'Catalog 05']), class: 'form-control'
+                        .col-md-3.col-sm-6
+                          .form-group
+                            = select_tag :category, options_for_select(['All Categories', 'Category 01', 'Category 02', 'Category 03', 'Category 04', 'Category 05']), class: 'form-control'
+                        .col-md-2.col-sm-6
+                          .form-group
+                            = submit_tag 'Search', class: 'form-control'
+              .booksmedia-detail-box
+                .detailed-box
+                  .col-xs-12.col-sm-5.col-md-3
+                    .post-thumbnail
+                      .book-list-icon.blue-icon
+                      = image_tag url_for(@book.cover_image), alt: @book.title
+                  .col-xs-12.col-sm-7.col-md-6
+                    .post-center-content
+                      h2 = @book.title 
+                      p
+                        strong Author:
+                        = @book.author.name
+                      p
+                        strong ISBN:
+                        |  9781581573268, 9780062419385
+                      p
+                        strong Published:
+                        = @book.published_date
+                      p
+                        strong Genre:
+                        = @book.genre
+                      .actions
+                        ul
+                          li
+                            = link_to '#', target: '_blank', data: { toggle: 'blog-tags', placement: 'top', original_title: 'Add To Cart' } do
+                              i.fa.fa-shopping-cart
+                          li
+                            = link_to '#', target: '_blank', data: { toggle: 'blog-tags', placement: 'top', original_title: 'Like' } do
+                              i.fa.fa-heart
+                          li
+                            = link_to '#', target: '_blank', data: { toggle: 'blog-tags', placement: 'top', original_title: 'Mail' } do
+                              i.fa.fa-envelope
+                          li
+                            = link_to '#', target: '_blank', data: { toggle: 'blog-tags', placement: 'top', original_title: 'Search' } do
+                              i.fa.fa-search
+                          li
+                            = link_to '#', target: '_blank', data: { toggle: 'blog-tags', placement: 'top', original_title: 'Print' } do
+                              i.fa.fa-print
+                          li
+                            = link_to '#', target: '_blank', data: { toggle: 'blog-tags', placement: 'top', original_title: 'Share' } do
+                              i.fa.fa-share-alt
+                  .col-xs-12.col-sm-12.col-md-3
+                    .post-right-content
+                      h4 Available now
+                      p
+                        strong Total Copies:
+                        = @book.number_of_copies
+                      p
+                        strong Available:
+                        |  019780062419385
+                      p
+                        strong Holds:
+                        |  01
+                      p
+                        strong Call #:
+                        |  747 STRUTT C
+                      = link_to '#.', class: 'available-location' do
+                        |  Availability by Location
+                        i.fa.fa-long-arrow-right aria-hidden="true"
+                      = link_to '#.', class: 'btn btn-dark-gray' do
+                        |  Place a Hold
+                      = link_to '#.', class: 'btn btn-dark-gray' do
+                        |  View sample
+                      = link_to '#.', class: 'btn btn-dark-gray' do
+                        |  Find Similar Titles
+                  .clearfix
+                .clearfix
+                p
+                  strong Summary:
+                  = @book.description   
