@@ -39,7 +39,19 @@ class BooksController < ApplicationController
   end
     
 
+  def like
+    if already_liked?
+      flash[:notice] = "You can't like more than once"
+    else
+      @book.likes.create(user_id: current_user.id)
+    end
+    redirect_to book_path(@book)
+  end
 
+
+  def already_liked?
+    Like.where(user_id: current_user.id, book_id: @book.id).exists?
+  end
 
   def edit
     @book = Book.find(params[:id])

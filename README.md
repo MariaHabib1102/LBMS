@@ -45,6 +45,13 @@
   - Number of Copies
   -pdf
   - number of likes
+
+
+  - **Likes & wishlistp
+  - joinig table betwee user and book 
+  - user ca like muliplle boooks and 
+   rails generate model Like user:references book:references
+
 - **Subject Categorization**: 
   - Fiction
   - Non-fiction
@@ -147,3 +154,6 @@
   - Functionality for lending and returning e-books
 
 
+
+rails admin team
+gem "administrate"

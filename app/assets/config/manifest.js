@@ -19,3 +19,7 @@
 //= link bxslider.min.js
 //= link main.js
 //= link jquery-1.12.4.min.js   
+//= link administrate/application.css
+//= link administrate/application.js
+
+//= link administrate-field-active_storage/application.css

@@ -58,6 +58,8 @@ Version: 1.0.0
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/*
+ */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -19234,4 +19236,16 @@ a:focus {
 
 .btn-custom.logout {
   background-color: #dc3545;
+}
+
+/* Default heart color (unliked) */
+.heart {
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Heart color when liked */
+.heart.liked {
+  color: red;
 }

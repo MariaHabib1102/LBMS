@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_many :book_users
   has_many :books, through: :book_users
+  has_many :likes
+  has_many :liked_books, through: :likes, source: :book
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -8,7 +10,10 @@ class User < ApplicationRecord
   before_create :generate_library_card_number
 
 
-
+  def already_liked?(book)
+    self.likes.exists?(book_id: book.id)
+  end
+  
   def generate_library_card_number
     loop do
       self.library_card_number = generate_unique_number
