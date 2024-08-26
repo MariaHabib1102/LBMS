@@ -42329,3 +42329,119 @@ ActionController::RoutingError (No route matches [GET] "/images/features-icons-h
   
 ActionController::RoutingError (No route matches [GET] "/images/green-underline.png"):
   
+Started GET "/" for ::1 at 2024-08-26 16:27:40 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+  Rendering layout layouts/application.slim
+  Rendering pages/index.html.slim within layouts/application
+  Rendered pages/index.html.slim within layouts/application (Duration: 94.0ms | Allocations: 112385)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 188.6ms | Allocations: 160634)
+Completed 200 OK in 242ms (Views: 230.6ms | ActiveRecord: 3.6ms | Allocations: 166635)
+
+
+Started GET "/images/features-icons-home-v1.png" for ::1 at 2024-08-26 16:27:40 +0500
+Started GET "/images/green-underline.png" for ::1 at 2024-08-26 16:27:40 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/features-icons-home-v1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/green-underline.png"):
+  
+Started DELETE "/users/sign_out" for ::1 at 2024-08-26 16:27:42 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Sign out"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/sign_in
+Completed 303 See Other in 12ms (ActiveRecord: 0.1ms | Allocations: 3634)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-08-26 16:27:42 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.slim
+  Rendering devise/sessions/new.slim within layouts/application
+  Rendered devise/sessions/new.slim within layouts/application (Duration: 21.9ms | Allocations: 15894)
+  Rendered layout layouts/application.slim (Duration: 25.4ms | Allocations: 18009)
+Completed 200 OK in 37ms (Views: 31.1ms | ActiveRecord: 0.0ms | Allocations: 19727)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-08-26 16:27:45 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 21.9ms | Allocations: 12464)
+  Rendered layout layouts/application.slim (Duration: 25.1ms | Allocations: 14490)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 15715)
+
+
+Started POST "/users" for ::1 at 2024-08-26 16:28:16 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"yousaf", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+[31mUnpermitted parameter: :name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000000107a72670>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"yousaf", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yousaf@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 3.8ms | Allocations: 2195)
+  Rendered layout layouts/application.slim (Duration: 7.3ms | Allocations: 4223)
+Completed 422 Unprocessable Content in 393ms (Views: 8.0ms | ActiveRecord: 1.8ms | Allocations: 13398)
+
+
+Started GET "/" for ::1 at 2024-08-26 16:35:08 +0500
+Processing by ApplicationController#index as HTML
+  Rendering layout layouts/application.slim
+  Rendering pages/index.html.slim within layouts/application
+  Rendered pages/index.html.slim within layouts/application (Duration: 63.8ms | Allocations: 103665)
+  Rendered layout layouts/application.slim (Duration: 83.3ms | Allocations: 125720)
+Completed 200 OK in 86ms (Views: 85.7ms | ActiveRecord: 0.0ms | Allocations: 126743)
+
+
+Started GET "/images/features-icons-home-v1.png" for ::1 at 2024-08-26 16:35:08 +0500
+Started GET "/images/green-underline.png" for ::1 at 2024-08-26 16:35:08 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/features-icons-home-v1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/green-underline.png"):
+  
+Started GET "/register/signup" for ::1 at 2024-08-26 16:35:17 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/register/signup"):
+  
+Started GET "/users/signup" for ::1 at 2024-08-26 16:35:20 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"signup"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+Completed 404 Not Found in 8ms (ActiveRecord: 4.4ms | Allocations: 2558)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=signup):
+  
+app/controllers/users_controller.rb:27:in `set_user'
+Started GET "/users/sign_up" for ::1 at 2024-08-26 16:35:26 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 12.5ms | Allocations: 13690)
+  Rendered layout layouts/application.slim (Duration: 15.6ms | Allocations: 15771)
+Completed 200 OK in 29ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 21968)
+
+
+Started POST "/users" for ::1 at 2024-08-26 16:35:40 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"yousaf", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+[31mUnpermitted parameter: :name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000000109765bb0>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"yousaf", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yousaf@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 2.6ms | Allocations: 1211)
+  Rendered layout layouts/application.slim (Duration: 5.0ms | Allocations: 3180)
+Completed 422 Unprocessable Content in 327ms (Views: 5.6ms | ActiveRecord: 1.8ms | Allocations: 9539)
+
+

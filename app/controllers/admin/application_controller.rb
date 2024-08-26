@@ -7,7 +7,7 @@ module Admin
 
     def authenticate_admin
       # Replace with your own admin check logic
-      redirect_to root_path, alert: "authorized." unless current_user.role == "admin"
+      redirect_to root_path, alert: " authorized." unless current_user.role == "admin"
     end
   end
 end

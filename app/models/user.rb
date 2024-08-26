@@ -14,6 +14,7 @@ class User < ApplicationRecord
     self.likes.exists?(book_id: book.id)
   end
   
+  
   def generate_library_card_number
     loop do
       self.library_card_number = generate_unique_number
@@ -23,5 +24,21 @@ class User < ApplicationRecord
 
   def generate_unique_number
     format('%06d', rand(1..999999))
+  end
+
+  validate :password_complexity
+
+  private
+
+  def password_complexity
+    return if password.blank?
+
+    if password.length < 8
+      errors.add :password, 'must be at least 8 characters long'
+    end
+
+    unless password.match?(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])/)
+      errors.add :password, 'must include at least one uppercase letter, one lowercase letter, one digit, and one special character (@, $, !, %, *, ?, &, #)'
+    end
   end
 end
