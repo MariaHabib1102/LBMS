@@ -77,3 +77,4 @@ gem "tailwindcss-rails", "~> 2.7"
 
 gem "administrate"
 gem "administrate-field-active_storage"
+gem "rolify"

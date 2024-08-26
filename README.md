@@ -10,9 +10,9 @@
   - Library Card Number
 
 - **Password Requirements**: 
-  - Minimum length (e.g., 8 characters)
-  - Complexity (e.g., must include uppercase letters, lowercase letters, numbers, and special characters)
-- **User Role Assignment**: 
+  --- Minimum length (e.g., 8 characters)
+  --- Complexity (e.g., must include uppercase letters, lowercase letters, numbers, and special characters)
+- **User Role Assignment Using Rolify Gem**: 
   - Student
   - Admin
   - Staff
