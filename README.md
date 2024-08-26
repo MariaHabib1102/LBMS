@@ -9,25 +9,25 @@
   - Address
   - Library Card Number
 
-- **Password Requirements**: 
+-  **Password Requirements**: 
   --- Minimum length (e.g., 8 characters)
-  --- Complexity (e.g., must include uppercase letters, lowercase letters, numbers, and special characters)
+  c Complexity (e.g., must include uppercase letters, lowercase letters, numbers, and special characters)
 - **User Role Assignment Using Rolify Gem**: 
-  - Student
-  - Admin
-  - Staff
-  - Librarian
+  --- Student
+  --- Admin
+  --- Staff
+  --- Librarian
 
 #### 1.2 User Login
 
 - **Password Recovery Options**: 
   - Forgot Password Link
   - Email Verification
-  - Security Questions
+
 
 #### 1.3 User Profile Management
 - **View and Update Personal Information**:
-  - View profile details
+  - pView profile details
   - Edit personal information (e.g., contact information, address) --- email should not be editable
 - **Change Password Functionality**: 
   - Update password with current password verification

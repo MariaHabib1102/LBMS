@@ -5,7 +5,9 @@ html
 
   body
     .container
-      h1 Edit User Profile
+      .form-group.control-label 
+        h1 
+          = @user.email
 
       = form_with model: @user, local: true do |form|
         .row
@@ -14,9 +16,6 @@ html
               = form.label :name, class: 'control-label'
               = form.text_field :name, class: 'form-control', placeholder: 'Enter your name'
 
-            .form-group
-              = form.label :email, class: 'control-label'
-              = form.email_field :email, class: 'form-control', placeholder: 'Enter your email'
 
             .form-group
               = form.label :contact, class: 'control-label'

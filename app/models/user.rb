@@ -37,9 +37,5 @@ class User < ApplicationRecord
     if password.length < 8
       errors.add :password, 'must be at least 8 characters long'
     end
-
-    unless password.match?(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])/)
-      errors.add :password, 'must include at least one uppercase letter, one lowercase letter, one digit, and one special character (@, $, !, %, *, ?, &, #)'
-    end
   end
 end

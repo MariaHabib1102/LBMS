@@ -42463,3 +42463,524 @@ Migrating to RolifyCreateRoles (20240826113918)
   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_in" for ::1 at 2024-08-26 16:45:43 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.slim
+  Rendering devise/sessions/new.slim within layouts/application
+  Rendered devise/sessions/new.slim within layouts/application (Duration: 47.0ms | Allocations: 24969)
+  Rendered layout layouts/application.slim (Duration: 64.1ms | Allocations: 46905)
+Completed 200 OK in 148ms (Views: 85.4ms | ActiveRecord: 3.0ms | Allocations: 75486)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-08-26 16:45:49 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usama@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usama@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 335ms (ActiveRecord: 0.2ms | Allocations: 5777)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usama@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.slim
+  Rendering devise/sessions/new.slim within layouts/application
+  Rendered devise/sessions/new.slim within layouts/application (Duration: 2.4ms | Allocations: 1279)
+  Rendered layout layouts/application.slim (Duration: 5.9ms | Allocations: 3263)
+Completed 200 OK in 314ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3972)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-08-26 16:45:54 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usama@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "usama@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 315ms (ActiveRecord: 0.1ms | Allocations: 1840)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"usama@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.slim
+  Rendering devise/sessions/new.slim within layouts/application
+  Rendered devise/sessions/new.slim within layouts/application (Duration: 2.6ms | Allocations: 1159)
+  Rendered layout layouts/application.slim (Duration: 5.9ms | Allocations: 3105)
+Completed 200 OK in 315ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3622)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/sign_up" for ::1 at 2024-08-26 16:48:11 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 11.1ms | Allocations: 13667)
+  Rendered layout layouts/application.slim (Duration: 14.1ms | Allocations: 15693)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 16863)
+
+
+Started POST "/users" for ::1 at 2024-08-26 16:48:22 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"yousaf", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+[31mUnpermitted parameter: :name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000000010f79b2c8>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"yousaf", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yousaf@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 2.2ms | Allocations: 1364)
+  Rendered layout layouts/application.slim (Duration: 4.9ms | Allocations: 3400)
+Completed 422 Unprocessable Content in 329ms (Views: 5.7ms | ActiveRecord: 1.8ms | Allocations: 10309)
+
+
+Started POST "/users" for ::1 at 2024-08-26 16:48:38 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+[31mUnpermitted parameter: :name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000000010f928500>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yousaf@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 1.8ms | Allocations: 1184)
+  Rendered layout layouts/application.slim (Duration: 4.2ms | Allocations: 3153)
+Completed 422 Unprocessable Content in 318ms (Views: 4.6ms | ActiveRecord: 1.6ms | Allocations: 8712)
+
+
+Started POST "/users" for ::1 at 2024-08-26 16:49:01 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+[31mUnpermitted parameter: :name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000000010fa73428>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (4.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yousaf@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 4.5ms | Allocations: 1093)
+  Rendered layout layouts/application.slim (Duration: 17.2ms | Allocations: 3062)
+Completed 422 Unprocessable Content in 354ms (Views: 20.7ms | ActiveRecord: 4.5ms | Allocations: 8349)
+
+
+Started POST "/users" for ::1 at 2024-08-26 16:49:40 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+[31mUnpermitted parameter: :name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000000010938ec80>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yousaf@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 1.9ms | Allocations: 1093)
+  Rendered layout layouts/application.slim (Duration: 4.6ms | Allocations: 3062)
+Completed 422 Unprocessable Content in 315ms (Views: 5.1ms | ActiveRecord: 2.0ms | Allocations: 8340)
+
+
+Started POST "/users" for ::1 at 2024-08-26 16:50:01 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+[31mUnpermitted parameter: :name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000000010dd088c0>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yousaf@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 2.7ms | Allocations: 1951)
+  Rendered layout layouts/application.slim (Duration: 6.0ms | Allocations: 3920)
+Completed 422 Unprocessable Content in 323ms (Views: 6.5ms | ActiveRecord: 1.7ms | Allocations: 9239)
+
+
+Started POST "/users" for ::1 at 2024-08-26 16:50:19 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+[31mUnpermitted parameter: :name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000000010e688ff8>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yousaf@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 1.8ms | Allocations: 1092)
+  Rendered layout layouts/application.slim (Duration: 4.6ms | Allocations: 3061)
+Completed 422 Unprocessable Content in 322ms (Views: 5.0ms | ActiveRecord: 2.2ms | Allocations: 8321)
+
+
+Started POST "/users" for ::1 at 2024-08-26 16:51:24 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"yousaf", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+[31mUnpermitted parameter: :name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000000010f3e7870>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"yousaf", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yousaf@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.slim
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/registrations/new.slim within layouts/application (Duration: 46.9ms | Allocations: 24086)
+  Rendered layout layouts/application.slim (Duration: 63.9ms | Allocations: 46050)
+Completed 422 Unprocessable Content in 467ms (Views: 79.0ms | ActiveRecord: 4.6ms | Allocations: 84224)
+
+
+Started POST "/users" for ::1 at 2024-08-26 16:51:34 +0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+[31mUnpermitted parameter: :name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000000010f44ae48>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"yousaf@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yousaf@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."library_card_number" = ? LIMIT ?[0m  [["library_card_number", 53138], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `block in generate_library_card_number'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "contact", "address", "library_card_number", "role", "fees", "name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "yousaf@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-08-26 11:51:34.458521"], ["updated_at", "2024-08-26 11:51:34.458521"], ["contact", nil], ["address", nil], ["library_card_number", 53138], ["role", nil], ["fees", nil], ["name", nil]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 327ms (ActiveRecord: 8.1ms | Allocations: 8751)
+
+
+Started GET "/" for ::1 at 2024-08-26 16:51:34 +0500
+Processing by ApplicationController#index as HTML
+  Rendering layout layouts/application.slim
+  Rendering pages/index.html.slim within layouts/application
+  Rendered pages/index.html.slim within layouts/application (Duration: 120.3ms | Allocations: 103726)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 127.1ms | Allocations: 107651)
+Completed 200 OK in 130ms (Views: 128.6ms | ActiveRecord: 0.2ms | Allocations: 108345)
+
+
+Started GET "/images/features-icons-home-v1.png" for ::1 at 2024-08-26 16:51:34 +0500
+Started GET "/images/green-underline.png" for ::1 at 2024-08-26 16:51:34 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/features-icons-home-v1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/green-underline.png"):
+  
+Started GET "/users/6" for ::1 at 2024-08-26 16:51:50 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+  Rendering layout layouts/application.slim
+  Rendering users/show.slim within layouts/application
+  Rendered users/show.slim within layouts/application (Duration: 7.5ms | Allocations: 8413)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 13.3ms | Allocations: 11841)
+Completed 200 OK in 25ms (Views: 15.6ms | ActiveRecord: 0.3ms | Allocations: 13889)
+
+
+Started GET "/users/6/edit" for ::1 at 2024-08-26 16:51:51 +0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+  Rendering layout layouts/application.slim
+  Rendering users/edit.slim within layouts/application
+  Rendered users/edit.slim within layouts/application (Duration: 16.4ms | Allocations: 11308)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 23.8ms | Allocations: 14561)
+Completed 200 OK in 33ms (Views: 24.3ms | ActiveRecord: 0.3ms | Allocations: 15441)
+
+
+Started GET "/users/6/edit" for ::1 at 2024-08-26 16:52:42 +0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+  Rendering layout layouts/application.slim
+  Rendering users/edit.slim within layouts/application
+  Rendered users/edit.slim within layouts/application (Duration: 7.7ms | Allocations: 10963)
+  Rendered layout layouts/application.slim (Duration: 8.0ms | Allocations: 11063)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.4ms | Allocations: 19730)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check doctype html
+html
+  head
+    title Edit User Profile
+
+  body
+    .container
+      h1 Edit User Profile
+
+      = form_with model: @user, local: true do |form|
+        .row
+          .col-md-6
+            .form-group
+              = form.label :name, class: 'control-label'
+              = form.text_field :name, class: 'form-control', placeholder: 'Enter your name'
+
+            .form-group
+              = form.label :email, class: 'control-label'
+              =  :email, class: 'form-control', placeholder: 'Enter your email'
+
+            .form-group
+              = form.label :contact, class: 'control-label'
+              = form.text_field :contact, class: 'form-control', placeholder: 'Enter your contact number'
+
+            .form-group
+              = form.label :address, class: 'control-label'
+              = form.text_area :address, class: 'form-control', placeholder: 'Enter your address'
+
+            .form-group
+              = form.label :library_card_number, class: 'control-label'
+              = form.number_field :library_card_number, class: 'form-control', placeholder: 'Enter your library card number'
+
+        /   .col-md-6
+        /     .form-group
+        /       = form.label :role, class: 'control-label'
+        /       = form.text_field :role, class: 'form-control', placeholder: 'Enter your role'
+
+        /     .form-group
+        /       = form.label :fees, class: 'control-label'
+        /       = form.number_field :fees, step: '0.01', class: 'form-control', placeholder: 'Enter your fees'
+
+        .mt-3
+          = form.submit 'Update Profile', class: 'btn btn-primary'
+
+
+):
+1:    doctype html
+2:    html
+3:      head
+4:        title Edit User Profile
+5:    
+6:      body
+7:        .container
+8:          h1 Edit User Profile
+9:    
+10:          = form_with model: @user, local: true do |form|
+11:            .row
+12:              .col-md-6
+13:                .form-group
+14:                  = form.label :name, class: 'control-label'
+15:                  = form.text_field :name, class: 'form-control', placeholder: 'Enter your name'
+16:    
+17:                .form-group
+18:                  = form.label :email, class: 'control-label'
+19:                  =  :email, class: 'form-control', placeholder: 'Enter your email'
+20:    
+21:                .form-group
+22:                  = form.label :contact, class: 'control-label'
+23:                  = form.text_field :contact, class: 'form-control', placeholder: 'Enter your contact number'
+24:    
+25:                .form-group
+26:                  = form.label :address, class: 'control-label'
+27:                  = form.text_area :address, class: 'form-control', placeholder: 'Enter your address'
+28:    
+29:                .form-group
+30:                  = form.label :library_card_number, class: 'control-label'
+31:                  = form.number_field :library_card_number, class: 'form-control', placeholder: 'Enter your library card number'
+32:    
+33:            /   .col-md-6
+34:            /     .form-group
+35:            /       = form.label :role, class: 'control-label'
+36:            /       = form.text_field :role, class: 'form-control', placeholder: 'Enter your role'
+37:    
+38:            /     .form-group
+39:            /       = form.label :fees, class: 'control-label'
+40:            /       = form.number_field :fees, step: '0.01', class: 'form-control', placeholder: 'Enter your fees'
+41:    
+42:            .mt-3
+43:              = form.submit 'Update Profile', class: 'btn btn-primary'
+  
+app/views/users/edit.slim:19: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.slim:19: syntax error, unexpected ',', expecting ')'
+Started GET "/users/6/edit" for ::1 at 2024-08-26 16:52:49 +0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+  Rendering layout layouts/application.slim
+  Rendering users/edit.slim within layouts/application
+  Rendered users/edit.slim within layouts/application (Duration: 9.2ms | Allocations: 10420)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 28.4ms | Allocations: 33599)
+Completed 200 OK in 45ms (Views: 31.1ms | ActiveRecord: 2.5ms | Allocations: 42229)
+
+
+Started GET "/users/6/edit" for ::1 at 2024-08-26 16:53:16 +0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+  Rendering layout layouts/application.slim
+  Rendering users/edit.slim within layouts/application
+  Rendered users/edit.slim within layouts/application (Duration: 26.5ms | Allocations: 10893)
+  Rendered layout layouts/application.slim (Duration: 33.7ms | Allocations: 10990)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 2.7ms | Allocations: 19624)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check doctype html
+html
+  head
+    title Edit User Profile
+
+  body
+    .container
+      h1 Edit User Profile
+
+      = form_with model: @user, local: true do |form|
+        .row
+          .col-md-6
+            .form-group
+              = form.label :name, class: 'control-label'
+              = form.text_field :name, class: 'form-control', placeholder: 'Enter your name'
+
+            .form-group.control-label
+              = form.labclass: 'control-label'
+              = @user.email
+
+            .form-group
+              = form.label :contact, class: 'control-label'
+              = form.text_field :contact, class: 'form-control', placeholder: 'Enter your contact number'
+
+            .form-group
+              = form.label :address, class: 'control-label'
+              = form.text_area :address, class: 'form-control', placeholder: 'Enter your address'
+
+            .form-group
+              = form.label :library_card_number, class: 'control-label'
+              = form.number_field :library_card_number, class: 'form-control', placeholder: 'Enter your library card number'
+
+        /   .col-md-6
+        /     .form-group
+        /       = form.label :role, class: 'control-label'
+        /       = form.text_field :role, class: 'form-control', placeholder: 'Enter your role'
+
+        /     .form-group
+        /       = form.label :fees, class: 'control-label'
+        /       = form.number_field :fees, step: '0.01', class: 'form-control', placeholder: 'Enter your fees'
+
+        .mt-3
+          = form.submit 'Update Profile', class: 'btn btn-primary'
+
+
+):
+1:    doctype html
+2:    html
+3:      head
+4:        title Edit User Profile
+5:    
+6:      body
+7:        .container
+8:          h1 Edit User Profile
+9:    
+10:          = form_with model: @user, local: true do |form|
+11:            .row
+12:              .col-md-6
+13:                .form-group
+14:                  = form.label :name, class: 'control-label'
+15:                  = form.text_field :name, class: 'form-control', placeholder: 'Enter your name'
+16:    
+17:                .form-group.control-label
+18:                  = form.labclass: 'control-label'
+19:                  = @user.email
+20:    
+21:                .form-group
+22:                  = form.label :contact, class: 'control-label'
+23:                  = form.text_field :contact, class: 'form-control', placeholder: 'Enter your contact number'
+24:    
+25:                .form-group
+26:                  = form.label :address, class: 'control-label'
+27:                  = form.text_area :address, class: 'form-control', placeholder: 'Enter your address'
+28:    
+29:                .form-group
+30:                  = form.label :library_card_number, class: 'control-label'
+31:                  = form.number_field :library_card_number, class: 'form-control', placeholder: 'Enter your library card number'
+32:    
+33:            /   .col-md-6
+34:            /     .form-group
+35:            /       = form.label :role, class: 'control-label'
+36:            /       = form.text_field :role, class: 'form-control', placeholder: 'Enter your role'
+37:    
+38:            /     .form-group
+39:            /       = form.label :fees, class: 'control-label'
+40:            /       = form.number_field :fees, step: '0.01', class: 'form-control', placeholder: 'Enter your fees'
+41:    
+42:            .mt-3
+43:              = form.submit 'Update Profile', class: 'btn btn-primary'
+  
+app/views/users/edit.slim:18: syntax error, unexpected ':'
+Started GET "/users/6/edit" for ::1 at 2024-08-26 16:53:20 +0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+  Rendering layout layouts/application.slim
+  Rendering users/edit.slim within layouts/application
+  Rendered users/edit.slim within layouts/application (Duration: 9.6ms | Allocations: 10487)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 29.4ms | Allocations: 33666)
+Completed 200 OK in 47ms (Views: 32.4ms | ActiveRecord: 2.5ms | Allocations: 42307)
+
+
+Started GET "/users/6/edit" for ::1 at 2024-08-26 16:53:46 +0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+  Rendering layout layouts/application.slim
+  Rendering users/edit.slim within layouts/application
+  Rendered users/edit.slim within layouts/application (Duration: 8.4ms | Allocations: 10057)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 100.4ms | Allocations: 33244)
+Completed 200 OK in 116ms (Views: 103.1ms | ActiveRecord: 2.5ms | Allocations: 41877)
+
+
+Started GET "/users/6/edit" for ::1 at 2024-08-26 16:53:59 +0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+  Rendering layout layouts/application.slim
+  Rendering users/edit.slim within layouts/application
+  Rendered users/edit.slim within layouts/application (Duration: 10.2ms | Allocations: 10484)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 29.8ms | Allocations: 33663)
+Completed 200 OK in 47ms (Views: 32.5ms | ActiveRecord: 2.7ms | Allocations: 42290)
+
+
+Started GET "/users/6/edit" for ::1 at 2024-08-26 16:54:10 +0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+  Rendering layout layouts/application.slim
+  Rendering users/edit.slim within layouts/application
+  Rendered users/edit.slim within layouts/application (Duration: 10.1ms | Allocations: 10678)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 30.7ms | Allocations: 33856)
+Completed 200 OK in 48ms (Views: 33.3ms | ActiveRecord: 2.6ms | Allocations: 42420)
+
+
+Started GET "/users/6/edit" for ::1 at 2024-08-26 16:54:20 +0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+  Rendering layout layouts/application.slim
+  Rendering users/edit.slim within layouts/application
+  Rendered users/edit.slim within layouts/application (Duration: 2.3ms | Allocations: 1136)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 11.0ms | Allocations: 4126)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 4949)
+
+
+Started GET "/users/6/edit" for ::1 at 2024-08-26 16:54:21 +0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `set_user'
+  Rendering layout layouts/application.slim
+  Rendering users/edit.slim within layouts/application
+  Rendered users/edit.slim within layouts/application (Duration: 9.4ms | Allocations: 10416)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 29.0ms | Allocations: 33594)
+Completed 200 OK in 45ms (Views: 31.7ms | ActiveRecord: 3.1ms | Allocations: 42221)
+
+
