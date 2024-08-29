@@ -18,7 +18,7 @@
                     .col-md-3.col-sm-6
                       .form-group
                         = f.label :author_id_eq, "Select Author", class: "control-label"
-                        = f.collection_select :author_id_eq, Author.joins(:books).distinct, :id, :name, include_blank: "All Authors", class: "form-control"
+                        = f.collection_select :author_id_eq, Author.joins(:books).distinct, :id, :name  
 
                     .col-md-3.col-sm-6
                       .form-group
@@ -34,13 +34,7 @@
             div.col-md-2.col-sm-6
             div.clear
               div.filter-options.margin-list
-                div.row                                      
-                  div.col-md-2.col-sm-12.pull-right
-                    div.filter-toggle
-                      a href="#{books_path(view: 'grid')}" class=("#{'active' if params[:view] == 'grid'}")
-                        i.glyphicon.glyphicon-th-large
-                      a href="#{books_path(view: 'list')}" class=("#{'active' if params[:view] == 'list'}")
-                        i.glyphicon.glyphicon-th-list
+
 
               div.booksmedia-fullwidth
                 ul

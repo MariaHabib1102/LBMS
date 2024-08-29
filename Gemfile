@@ -79,3 +79,10 @@ gem "administrate"
 gem "administrate-field-active_storage"
 gem "rolify"
 gem 'ransack'
+gem "pay", "~> 7.0"
+
+gem "stripe", "~> 12.0"
+gem "braintree", "~> 4.7"
+gem "paddle", "~> 2.5"
+gem "lemonsqueezy", "~> 1.0"  
+gem "receipts", "~> 2.0"  

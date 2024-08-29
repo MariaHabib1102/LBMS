@@ -6,32 +6,6 @@
         div.books-full-width
           div.container
             / Start: Search Section
-            section.search-filters
-              div.filter-box
-                h3 What are you looking for at the library?
-                = form_tag books_path, method: :get do
-                  div.col-md-4.col-sm-6
-                    div.form-group
-                      = text_field_tag :keywords, params[:keywords], class: "form-control", placeholder: "Search by Keyword", id: "keywords"
-                  div.col-md-3.col-sm-6
-                    div.form-group
-                      = select_tag :catalog, options_for_select([['Search the Catalog', ''],
-                        ['Catalog 01', 'catalog01'],
-                        ['Catalog 02', 'catalog02'],
-                        ['Catalog 03', 'catalog03'],
-                        ['Catalog 04', 'catalog04'],
-                        ['Catalog 05', 'catalog05']], params[:catalog]), class: "form-control", id: "catalog"
-                  div.col-md-3.col-sm-6
-                    div.form-group
-                      = select_tag :category, options_for_select([['Select Category', ''],
-                        ['Category 01', 'category01'],
-                        ['Category 02', 'category02'],
-                        ['Category 03', 'category03'],
-                        ['Category 04', 'category04'],
-                        ['Category 05', 'category05']], params[:category]), class: "form-control", id: "category"
-                  div.col-md-2.col-sm-6
-                    div.form-group
-                      = submit_tag "Search", class: "form-control"
 
               div.col-md-2.col-sm-6
               div.clear
@@ -39,21 +13,21 @@
               div.row                                      
                 div.col-md-3.col-sm-3
                   select name="orderby"
-                    option selected="selected" Sort by Title
+                    option Sort by Title
                     option Sort by popularity
                     option Sort by rating
                     option Sort by newness
                     option Sort by price
                 div.col-md-3.col-sm-3
                   select name="orderby"
-                    option selected="selected" Sort by Author
+                    option  Sort by Author
                     option Sort by popularity
                     option Sort by rating
                     option Sort by newness
                     option Sort by price
                 div.col-md-2.col-sm-3
                   select name="orderby"
-                    option selected="selected" Language
+                    option Language
                     option Sort by popularity
                     option Sort by rating
                     option Sort by newness
@@ -65,13 +39,6 @@
                     option Sort by rating
                     option Sort by newness
                     option Sort by price
-                div.col-md-2.col-sm-12.pull-right
-                  div.filter-toggle
-                    a href="#{books_path(view: 'grid')}" class=("#{'active' if params[:view] == 'grid'}")
-                      i.glyphicon.glyphicon-th-large
-                    a href="#{books_path(view: 'list')}" class=("#{'active' if params[:view] == 'list'}")
-                      i.glyphicon.glyphicon-th-list
-
             div.booksmedia-fullwidth
               ul
                 - @user_books.each do |book|
@@ -112,19 +79,6 @@
                             li
                               = link_to '#', target: '_blank', data: { toggle: "blog-tags", placement: "top" }, title: "Share" do
                                 i.fa.fa-share-alt
-
-          /   / Pagination
-          /   nav.navigation.pagination.text-center
-          /     h2.screen-reader-text Posts navigation
-          /     div.nav-links
-          /       = link_to '#', class: 'prev page-numbers' do
-          /         i.fa.fa-long-arrow-left
-          /         | Previous
-          /       - @user_books.each_with_index do |_, index|
-          /         = link_to (index + 1).to_s, '#', class: "page-numbers #{'current' if index == 1}"
-          /       = link_to '#', class: 'next page-numbers' do
-          /         i.fa.fa-long-arrow-right
-          /         | Next
 
   / Include necessary JavaScript files
   = javascript_include_tag 'jquery-ui.min', 'data-turbolinks-track': 'reload'

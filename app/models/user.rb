@@ -9,6 +9,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   before_create :generate_library_card_number
+  pay_customer
 
 
   def already_liked?(book)

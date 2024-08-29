@@ -18,6 +18,8 @@ class UsersController < ApplicationController
 
     def user_books
         @user_books = current_user.books
+        @q =@user_books.ransack(params[:q])
+        @books = @q.result(distinct: true)   
     end
   
     private

@@ -112,7 +112,7 @@
 
 #### 4.1 Circulation Reports
 - **Metrics**:
-  - Number of books borrowed
+  - Number of b ooks borrowed
   - Number of books returned
   - Number of overdue books
 - **Popular Books**:
@@ -152,5 +152,22 @@
 
 
 
-rails admin team
-gem "administrate"
+installed rails admin team
+innstalled gem "administrate"
+installed pay_rails gem
+gem "pay", "~> 7.0"
+
+# To use Stripe, also include:
+gem "stripe", "~> 12.0"
+
+# To use Braintree + PayPal, also include:
+gem "braintree", "~> 4.7"
+
+# To use Paddle Billing or Paddle Classic, also include:
+gem "paddle", "~> 2.5"
+
+# To use Lemon Squeezy, also include:
+gem "lemonsqueezy", "~> 1.0"
+
+# To use Receipts gem for creating invoice and receipt PDFs, also include:
+gem "receipts", "~> 2.0"
