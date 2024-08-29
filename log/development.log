@@ -42984,3 +42984,1569 @@ Processing by UsersController#edit as HTML
 Completed 200 OK in 45ms (Views: 31.7ms | ActiveRecord: 3.1ms | Allocations: 42221)
 
 
+Started GET "/" for ::1 at 2024-08-26 17:29:13 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+  Rendering layout layouts/application.slim
+  Rendering pages/index.html.slim within layouts/application
+  Rendered pages/index.html.slim within layouts/application (Duration: 154.2ms | Allocations: 112385)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 235.3ms | Allocations: 160623)
+Completed 200 OK in 329ms (Views: 321.0ms | ActiveRecord: 3.0ms | Allocations: 177381)
+
+
+Started GET "/images/features-icons-home-v1.png" for ::1 at 2024-08-26 17:29:14 +0500
+Started GET "/images/green-underline.png" for ::1 at 2024-08-26 17:29:14 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/green-underline.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/features-icons-home-v1.png"):
+  
+Started GET "/user_books.6" for ::1 at 2024-08-26 17:29:17 +0500
+Processing by UsersController#user_books as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `user_books'
+  Rendering layout layouts/application.slim
+  Rendering users/user_books.slim within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "book_users" ON "books"."id" = "book_users"."book_id" WHERE "book_users"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/user_books.slim:77
+  Rendered users/user_books.slim within layouts/application (Duration: 40.5ms | Allocations: 47075)
+  Rendered layout layouts/application.slim (Duration: 44.5ms | Allocations: 49376)
+Completed 200 OK in 104ms (Views: 50.9ms | ActiveRecord: 1.2ms | Allocations: 63383)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-26 17:29:17 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-26 17:29:17 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-26 17:29:17 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:29:24 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:77
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:83
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:83
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:90
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:83
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:90
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:83
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:83
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:90
+  Rendered books/index.slim within layouts/application (Duration: 158.1ms | Allocations: 92910)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 170.4ms | Allocations: 95966)
+Completed 200 OK in 174ms (Views: 170.7ms | ActiveRecord: 2.8ms | Allocations: 96692)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--ed7de0f195165ddd49c639edc92f8c866540f5a0/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:29:24 +0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTcsInB1ciI6ImJsb2JfaWQifX0=--7abbe2b17476caa0bc501c9f95995ad05d7a1f94/harry_potter.jpeg" for ::1 at 2024-08-26 17:29:24 +0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTgsInB1ciI6ImJsb2JfaWQifX0=--9c5ff52335cc327520ef0f83a9e970b77fe80a4a/matilda.jpeg" for ::1 at 2024-08-26 17:29:25 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-26 17:29:25 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-26 17:29:25 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--ed7de0f195165ddd49c639edc92f8c866540f5a0", "filename"=>"cat_in_hat"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTcsInB1ciI6ImJsb2JfaWQifX0=--7abbe2b17476caa0bc501c9f95995ad05d7a1f94", "filename"=>"harry_potter"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: bmhjxc6l8a3ix254uo0asl79x2mj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6MzQ6MjUuMTM2WiIsInB1ciI6ImJsb2Jfa2V5In19--a165934d20ad5000f112cc91e2a46597d8342dbc/cat_in_hat.jpeg)[0m
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: 2qw66so3u3r1mar4d3539eikwtcg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjM0OjI1LjEzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--29b66c2e8c0fe6956200f155cec71f676ac699a4/harry_potter.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjM0OjI1LjEzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--29b66c2e8c0fe6956200f155cec71f676ac699a4/harry_potter.jpeg
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6MzQ6MjUuMTM2WiIsInB1ciI6ImJsb2Jfa2V5In19--a165934d20ad5000f112cc91e2a46597d8342dbc/cat_in_hat.jpeg
+Completed 302 Found in 16ms (ActiveRecord: 2.3ms | Allocations: 4785)
+
+
+Completed 302 Found in 16ms (ActiveRecord: 0.2ms | Allocations: 4870)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6MzQ6MjUuMTM2WiIsInB1ciI6ImJsb2Jfa2V5In19--a165934d20ad5000f112cc91e2a46597d8342dbc/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:29:25 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjM0OjI1LjEzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--29b66c2e8c0fe6956200f155cec71f676ac699a4/harry_potter.jpeg" for ::1 at 2024-08-26 17:29:25 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTgsInB1ciI6ImJsb2JfaWQifX0=--9c5ff52335cc327520ef0f83a9e970b77fe80a4a", "filename"=>"matilda"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 1b0j8gdnylijxkepgbinf8c3yskj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6MzQ6MjUuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--d33b392543563d82067fdbb5f760d8ecbf2b98ec/matilda.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6MzQ6MjUuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--d33b392543563d82067fdbb5f760d8ecbf2b98ec/matilda.jpeg
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms | Allocations: 1468)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6MzQ6MjUuMTgwWiIsInB1ciI6ImJsb2Jfa2V5In19--d33b392543563d82067fdbb5f760d8ecbf2b98ec/matilda.jpeg" for ::1 at 2024-08-26 17:29:25 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 1123)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Completed 200 OK in 6ms (ActiveRecord: 0.0ms | Allocations: 968)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-26 17:29:25 +0500
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 331)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-26 17:29:25 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:33:04 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  Rendered books/index.slim within layouts/application (Duration: 28.0ms | Allocations: 47599)
+  Rendered layout layouts/application.slim (Duration: 28.4ms | Allocations: 47688)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 2.7ms | Allocations: 53638)
+
+
+  
+ActionView::Template::Error (No Ransack::Search object was provided to search_form_for!):
+    10:               div.filter-box
+    11:                 h3 What are you looking for at the library?
+    12:                 
+    13:                 = search_form_for @q, url: books_path, method: :get do |f|
+    14:                   div.col-md-4.col-sm-6
+    15:                     div.form-group
+    16:                       = f.label :title_or_author_name_cont, "Search by Keyword", class: "control-label"
+  
+app/views/books/index.slim:13
+app/controllers/books_controller.rb:35:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:34:24 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  Rendered books/index.slim within layouts/application (Duration: 24.0ms | Allocations: 43359)
+  Rendered layout layouts/application.slim (Duration: 24.6ms | Allocations: 43448)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 2.3ms | Allocations: 49367)
+
+
+  
+ActionView::Template::Error (No Ransack::Search object was provided to search_form_for!):
+    34:             div.filter-box
+    35:               h3 What are you looking for at the library?
+    36:               
+    37:               = search_form_for @q, url: books_path, method: :get do |f|
+    38:                 div.col-md-4.col-sm-6
+    39:                   div.form-group
+    40:                     = f.label :title_or_author_name_cont, "Search by Keyword", class: "control-label"
+  
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:35:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:36:01 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  Rendered books/index.slim within layouts/application (Duration: 26.6ms | Allocations: 43888)
+  Rendered layout layouts/application.slim (Duration: 26.9ms | Allocations: 43986)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 2.8ms | Allocations: 50217)
+
+
+  
+ActionView::Template::Error (Ransack needs Book attributes explicitly allowlisted as
+searchable. Define a `ransackable_attributes` class method in your `Book`
+model, watching out for items you DON'T want searchable (for
+example, `encrypted_password`, `password_reset_token`, `owner` or
+other sensitive information). You can use the following as a base:
+
+```ruby
+class Book < ApplicationRecord
+
+  # ...
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["amount", "author_id", "cover_image", "created_at", "description", "genre", "id", "id_value", "likes", "number_of_copies", "published_date", "status", "title", "updated_at"]
+  end
+
+  # ...
+
+end
+```
+):
+    38:                 div.col-md-4.col-sm-6
+    39:                   div.form-group
+    40:                     = f.label :title_or_author_name_cont, "Search by Keyword", class: "control-label"
+    41:                     = f.search_field :title_or_author_name_cont, class: "form-control", placeholder: "Search by Keyword"
+    42: 
+    43:                 div.col-md-3.col-sm-6
+    44:                   div.form-group
+  
+app/views/books/index.slim:41
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/admin/books/new" for ::1 at 2024-08-26 17:37:33 +0500
+Processing by Admin::BooksController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 302 Found in 20ms (ActiveRecord: 2.5ms | Allocations: 9946)
+
+
+Started GET "/" for ::1 at 2024-08-26 17:37:33 +0500
+Processing by ApplicationController#index as HTML
+  Rendering layout layouts/application.slim
+  Rendering pages/index.html.slim within layouts/application
+  Rendered pages/index.html.slim within layouts/application (Duration: 61.6ms | Allocations: 103686)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 80.3ms | Allocations: 126945)
+Completed 200 OK in 84ms (Views: 83.5ms | ActiveRecord: 0.1ms | Allocations: 127980)
+
+
+Started GET "/images/features-icons-home-v1.png" for ::1 at 2024-08-26 17:37:34 +0500
+Started GET "/images/green-underline.png" for ::1 at 2024-08-26 17:37:34 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/features-icons-home-v1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/green-underline.png"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:37:42 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  Rendered books/index.slim within layouts/application (Duration: 46.0ms | Allocations: 45920)
+  Rendered layout layouts/application.slim (Duration: 46.3ms | Allocations: 46012)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.5ms | Allocations: 54941)
+
+
+  
+ActionView::Template::Error (Ransack needs Author attributes explicitly allowlisted as
+searchable. Define a `ransackable_attributes` class method in your `Author`
+model, watching out for items you DON'T want searchable (for
+example, `encrypted_password`, `password_reset_token`, `owner` or
+other sensitive information). You can use the following as a base:
+
+```ruby
+class Author < ApplicationRecord
+
+  # ...
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["bio", "created_at", "id", "id_value", "name", "updated_at"]
+  end
+
+  # ...
+
+end
+```
+):
+    43:                 div.col-md-3.col-sm-6
+    44:                   div.form-group
+    45:                     = f.label :author_id_eq, "Author", class: "control-label"
+    46:                     = f.collection_select :author_id_eq, Author.joins(:books).distinct, :id, :name, { include_blank: 'Select Author' }, class: "form-control"
+    47: 
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+  
+app/views/books/index.slim:46
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:38:22 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  Rendered books/index.slim within layouts/application (Duration: 38.6ms | Allocations: 45723)
+  Rendered layout layouts/application.slim (Duration: 39.0ms | Allocations: 45817)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 2.4ms | Allocations: 51893)
+
+
+  
+ActionView::Template::Error (Ransack needs Author attributes explicitly allowlisted as
+searchable. Define a `ransackable_attributes` class method in your `Author`
+model, watching out for items you DON'T want searchable (for
+example, `encrypted_password`, `password_reset_token`, `owner` or
+other sensitive information). You can use the following as a base:
+
+```ruby
+class Author < ApplicationRecord
+
+  # ...
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["bio", "created_at", "id", "id_value", "name", "updated_at"]
+  end
+
+  # ...
+
+end
+```
+):
+    43:                 div.col-md-3.col-sm-6
+    44:                   div.form-group
+    45:                     = f.label :author_id_eq, "Author", class: "control-label"
+    46:                     = f.collection_select :author_id_eq, Author.joins(:books).distinct, :id, :name, { include_blank: 'Select Author' }, class: "form-control"
+    47: 
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+  
+app/views/books/index.slim:46
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:38:24 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  Rendered books/index.slim within layouts/application (Duration: 1.6ms | Allocations: 1627)
+  Rendered layout layouts/application.slim (Duration: 1.8ms | Allocations: 1710)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2137)
+
+
+  
+ActionView::Template::Error (Ransack needs Author attributes explicitly allowlisted as
+searchable. Define a `ransackable_attributes` class method in your `Author`
+model, watching out for items you DON'T want searchable (for
+example, `encrypted_password`, `password_reset_token`, `owner` or
+other sensitive information). You can use the following as a base:
+
+```ruby
+class Author < ApplicationRecord
+
+  # ...
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["bio", "created_at", "id", "id_value", "name", "updated_at"]
+  end
+
+  # ...
+
+end
+```
+):
+    43:                 div.col-md-3.col-sm-6
+    44:                   div.form-group
+    45:                     = f.label :author_id_eq, "Author", class: "control-label"
+    46:                     = f.collection_select :author_id_eq, Author.joins(:books).distinct, :id, :name, { include_blank: 'Select Author' }, class: "form-control"
+    47: 
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+  
+app/views/books/index.slim:46
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:39:08 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  Rendered books/index.slim within layouts/application (Duration: 67.3ms | Allocations: 52552)
+  Rendered layout layouts/application.slim (Duration: 67.8ms | Allocations: 52650)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 4.4ms | Allocations: 58721)
+
+
+  
+ActionView::Template::Error (undefined method `published_at_gteq' for Ransack::Search<class: Book, base: Grouping <combinator: and>>:Ransack::Search):
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+    50:                     = f.label :published_at_gteq, "Published After", class: "control-label"
+    51:                     = f.date_field :published_at_gteq, class: "form-control", placeholder: "Select Date"
+    52: 
+    53:                 div.col-md-2.col-sm-6
+    54:                   div.form-group
+  
+app/views/books/index.slim:51
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:39:11 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  Rendered books/index.slim within layouts/application (Duration: 8.8ms | Allocations: 5113)
+  Rendered layout layouts/application.slim (Duration: 9.2ms | Allocations: 5196)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms | Allocations: 5628)
+
+
+  
+ActionView::Template::Error (undefined method `published_at_gteq' for Ransack::Search<class: Book, base: Grouping <combinator: and>>:Ransack::Search):
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+    50:                     = f.label :published_at_gteq, "Published After", class: "control-label"
+    51:                     = f.date_field :published_at_gteq, class: "form-control", placeholder: "Select Date"
+    52: 
+    53:                 div.col-md-2.col-sm-6
+    54:                   div.form-group
+  
+app/views/books/index.slim:51
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started PUT "/__web_console/repl_sessions/bd4b11fa71a002f9c9f016057012b280" for ::1 at 2024-08-26 17:39:24 +0500
+Started PUT "/__web_console/repl_sessions/bd4b11fa71a002f9c9f016057012b280" for ::1 at 2024-08-26 17:39:31 +0500
+Started PUT "/__web_console/repl_sessions/bd4b11fa71a002f9c9f016057012b280" for ::1 at 2024-08-26 17:39:32 +0500
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/books/index.slim:51
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:39:55 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  Rendered books/index.slim within layouts/application (Duration: 36.7ms | Allocations: 51983)
+  Rendered layout layouts/application.slim (Duration: 37.0ms | Allocations: 52072)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 3.4ms | Allocations: 58149)
+
+
+  
+ActionView::Template::Error (undefined method `published_at_gteq' for Ransack::Search<class: Book, base: Grouping <combinator: and>>:Ransack::Search):
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+    50:                     = f.label :published_at_gteq, "Published After", class: "control-label"
+    51:                     = f.date_field :published_at_gteq, class: "form-control", placeholder: "Select Date"
+    52: 
+    53:                 div.col-md-2.col-sm-6
+    54:                   div.form-group
+  
+app/views/books/index.slim:51
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:39:57 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  Rendered books/index.slim within layouts/application (Duration: 7.0ms | Allocations: 4981)
+  Rendered layout layouts/application.slim (Duration: 7.3ms | Allocations: 5064)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 5468)
+
+
+  
+ActionView::Template::Error (undefined method `published_at_gteq' for Ransack::Search<class: Book, base: Grouping <combinator: and>>:Ransack::Search):
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+    50:                     = f.label :published_at_gteq, "Published After", class: "control-label"
+    51:                     = f.date_field :published_at_gteq, class: "form-control", placeholder: "Select Date"
+    52: 
+    53:                 div.col-md-2.col-sm-6
+    54:                   div.form-group
+  
+app/views/books/index.slim:51
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:39:58 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  Rendered books/index.slim within layouts/application (Duration: 8.2ms | Allocations: 4954)
+  Rendered layout layouts/application.slim (Duration: 8.5ms | Allocations: 5037)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms | Allocations: 5377)
+
+
+  
+ActionView::Template::Error (undefined method `published_at_gteq' for Ransack::Search<class: Book, base: Grouping <combinator: and>>:Ransack::Search):
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+    50:                     = f.label :published_at_gteq, "Published After", class: "control-label"
+    51:                     = f.date_field :published_at_gteq, class: "form-control", placeholder: "Select Date"
+    52: 
+    53:                 div.col-md-2.col-sm-6
+    54:                   div.form-group
+  
+app/views/books/index.slim:51
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:40:00 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  Rendered books/index.slim within layouts/application (Duration: 6.7ms | Allocations: 4952)
+  Rendered layout layouts/application.slim (Duration: 7.0ms | Allocations: 5035)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 5375)
+
+
+  
+ActionView::Template::Error (undefined method `published_at_gteq' for Ransack::Search<class: Book, base: Grouping <combinator: and>>:Ransack::Search):
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+    50:                     = f.label :published_at_gteq, "Published After", class: "control-label"
+    51:                     = f.date_field :published_at_gteq, class: "form-control", placeholder: "Select Date"
+    52: 
+    53:                 div.col-md-2.col-sm-6
+    54:                   div.form-group
+  
+app/views/books/index.slim:51
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:40:16 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  Rendered books/index.slim within layouts/application (Duration: 44.8ms | Allocations: 52128)
+  Rendered layout layouts/application.slim (Duration: 45.1ms | Allocations: 52217)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 3.0ms | Allocations: 58288)
+
+
+  
+ActionView::Template::Error (undefined method `published_at_eq' for Ransack::Search<class: Book, base: Grouping <combinator: and>>:Ransack::Search
+Did you mean?  public_method):
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+    50:                     = f.label :published_at_eq, "Published After", class: "control-label"
+    51:                     = f.date_field :published_at_eq, class: "form-control", placeholder: "Select Date"
+    52: 
+    53:                 div.col-md-2.col-sm-6
+    54:                   div.form-group
+  
+app/views/books/index.slim:51
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:40:18 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  Rendered books/index.slim within layouts/application (Duration: 38.0ms | Allocations: 52101)
+  Rendered layout layouts/application.slim (Duration: 38.5ms | Allocations: 52190)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 3.4ms | Allocations: 58262)
+
+
+  
+ActionView::Template::Error (undefined method `published_at_eq' for Ransack::Search<class: Book, base: Grouping <combinator: and>>:Ransack::Search
+Did you mean?  public_method):
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+    50:                     = f.label :published_at_eq, "Published After", class: "control-label"
+    51:                     = f.date_field :published_at_eq, class: "form-control", placeholder: "Select Date"
+    52: 
+    53:                 div.col-md-2.col-sm-6
+    54:                   div.form-group
+  
+app/views/books/index.slim:51
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:40:20 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  Rendered books/index.slim within layouts/application (Duration: 7.9ms | Allocations: 5058)
+  Rendered layout layouts/application.slim (Duration: 8.2ms | Allocations: 5141)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms | Allocations: 5545)
+
+
+  
+ActionView::Template::Error (undefined method `published_at_eq' for Ransack::Search<class: Book, base: Grouping <combinator: and>>:Ransack::Search
+Did you mean?  public_method):
+    48:                 div.col-md-3.col-sm-6
+    49:                   div.form-group
+    50:                     = f.label :published_at_eq, "Published After", class: "control-label"
+    51:                     = f.date_field :published_at_eq, class: "form-control", placeholder: "Select Date"
+    52: 
+    53:                 div.col-md-2.col-sm-6
+    54:                   div.form-group
+  
+app/views/books/index.slim:51
+app/views/books/index.slim:37
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:40:34 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:93
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:106
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:106
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:106
+  Rendered books/index.slim within layouts/application (Duration: 182.6ms | Allocations: 79410)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 210.0ms | Allocations: 108051)
+Completed 200 OK in 228ms (Views: 210.6ms | ActiveRecord: 6.3ms | Allocations: 114150)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--ed7de0f195165ddd49c639edc92f8c866540f5a0/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:40:35 +0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTcsInB1ciI6ImJsb2JfaWQifX0=--7abbe2b17476caa0bc501c9f95995ad05d7a1f94/harry_potter.jpeg" for ::1 at 2024-08-26 17:40:35 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTcsInB1ciI6ImJsb2JfaWQifX0=--7abbe2b17476caa0bc501c9f95995ad05d7a1f94", "filename"=>"harry_potter"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--ed7de0f195165ddd49c639edc92f8c866540f5a0", "filename"=>"cat_in_hat"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (2.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (1.5ms) [0m[34mGenerated URL for file at key: 2qw66so3u3r1mar4d3539eikwtcg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjQ1OjM1LjIyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--144622aee1b87121a6daa09c9b60f7a138efb3ca/harry_potter.jpeg)[0m
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: bmhjxc6l8a3ix254uo0asl79x2mj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMjI5WiIsInB1ciI6ImJsb2Jfa2V5In19--83e2714c787cdaecb78c5d410f780b2e4dff0a3c/cat_in_hat.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjQ1OjM1LjIyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--144622aee1b87121a6daa09c9b60f7a138efb3ca/harry_potter.jpeg
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMjI5WiIsInB1ciI6ImJsb2Jfa2V5In19--83e2714c787cdaecb78c5d410f780b2e4dff0a3c/cat_in_hat.jpeg
+Completed 302 Found in 14ms (ActiveRecord: 0.1ms | Allocations: 4235)
+
+
+Completed 302 Found in 14ms (ActiveRecord: 3.1ms | Allocations: 4155)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjQ1OjM1LjIyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--144622aee1b87121a6daa09c9b60f7a138efb3ca/harry_potter.jpeg" for ::1 at 2024-08-26 17:40:35 +0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTgsInB1ciI6ImJsb2JfaWQifX0=--9c5ff52335cc327520ef0f83a9e970b77fe80a4a/matilda.jpeg" for ::1 at 2024-08-26 17:40:35 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMjI5WiIsInB1ciI6ImJsb2Jfa2V5In19--83e2714c787cdaecb78c5d410f780b2e4dff0a3c/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:40:35 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-26 17:40:35 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-26 17:40:35 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTgsInB1ciI6ImJsb2JfaWQifX0=--9c5ff52335cc327520ef0f83a9e970b77fe80a4a", "filename"=>"matilda"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 1b0j8gdnylijxkepgbinf8c3yskj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--f63743423e8a93079b70a13d36b16bd4656d868d/matilda.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--f63743423e8a93079b70a13d36b16bd4656d868d/matilda.jpeg
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms | Allocations: 2390)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--f63743423e8a93079b70a13d36b16bd4656d868d/matilda.jpeg" for ::1 at 2024-08-26 17:40:35 +0500
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 805)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 250)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 724)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-26 17:40:35 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-26 17:40:35 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:40:36 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:93
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:106
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:106
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:99
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:106
+  Rendered books/index.slim within layouts/application (Duration: 26.9ms | Allocations: 12809)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 32.9ms | Allocations: 15906)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 1.7ms | Allocations: 16354)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMjI5WiIsInB1ciI6ImJsb2Jfa2V5In19--83e2714c787cdaecb78c5d410f780b2e4dff0a3c/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:40:36 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjQ1OjM1LjIyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--144622aee1b87121a6daa09c9b60f7a138efb3ca/harry_potter.jpeg" for ::1 at 2024-08-26 17:40:36 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--f63743423e8a93079b70a13d36b16bd4656d868d/matilda.jpeg" for ::1 at 2024-08-26 17:40:36 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-26 17:40:36 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-26 17:40:36 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 220)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 228)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-26 17:40:37 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-26 17:40:37 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:41:09 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:65
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  Rendered books/index.slim within layouts/application (Duration: 89.7ms | Allocations: 70634)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 130.3ms | Allocations: 99294)
+Completed 200 OK in 149ms (Views: 131.1ms | ActiveRecord: 5.6ms | Allocations: 105391)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMjI5WiIsInB1ciI6ImJsb2Jfa2V5In19--83e2714c787cdaecb78c5d410f780b2e4dff0a3c/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:41:09 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjQ1OjM1LjIyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--144622aee1b87121a6daa09c9b60f7a138efb3ca/harry_potter.jpeg" for ::1 at 2024-08-26 17:41:09 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--f63743423e8a93079b70a13d36b16bd4656d868d/matilda.jpeg" for ::1 at 2024-08-26 17:41:09 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-26 17:41:09 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-26 17:41:09 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 521)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 188)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-26 17:41:10 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-26 17:41:10 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:41:10 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:65
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  Rendered books/index.slim within layouts/application (Duration: 29.1ms | Allocations: 12624)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 35.1ms | Allocations: 15660)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 1.0ms | Allocations: 16109)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMjI5WiIsInB1ciI6ImJsb2Jfa2V5In19--83e2714c787cdaecb78c5d410f780b2e4dff0a3c/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:41:10 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjQ1OjM1LjIyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--144622aee1b87121a6daa09c9b60f7a138efb3ca/harry_potter.jpeg" for ::1 at 2024-08-26 17:41:10 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--f63743423e8a93079b70a13d36b16bd4656d868d/matilda.jpeg" for ::1 at 2024-08-26 17:41:10 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-26 17:41:10 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-26 17:41:10 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms | Allocations: 232)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 196)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 213)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-26 17:41:10 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-26 17:41:11 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:41:11 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:65
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  Rendered books/index.slim within layouts/application (Duration: 23.5ms | Allocations: 12288)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 28.9ms | Allocations: 15263)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.9ms | Allocations: 15614)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMjI5WiIsInB1ciI6ImJsb2Jfa2V5In19--83e2714c787cdaecb78c5d410f780b2e4dff0a3c/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:41:12 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjQ1OjM1LjIyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--144622aee1b87121a6daa09c9b60f7a138efb3ca/harry_potter.jpeg" for ::1 at 2024-08-26 17:41:12 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--f63743423e8a93079b70a13d36b16bd4656d868d/matilda.jpeg" for ::1 at 2024-08-26 17:41:12 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-26 17:41:12 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-26 17:41:12 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 259)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 207)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 239)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-26 17:41:12 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-26 17:41:12 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:41:13 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:65
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  Rendered books/index.slim within layouts/application (Duration: 27.5ms | Allocations: 12302)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 33.5ms | Allocations: 15277)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 1.0ms | Allocations: 15629)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMjI5WiIsInB1ciI6ImJsb2Jfa2V5In19--83e2714c787cdaecb78c5d410f780b2e4dff0a3c/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:41:13 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjQ1OjM1LjIyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--144622aee1b87121a6daa09c9b60f7a138efb3ca/harry_potter.jpeg" for ::1 at 2024-08-26 17:41:13 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--f63743423e8a93079b70a13d36b16bd4656d868d/matilda.jpeg" for ::1 at 2024-08-26 17:41:13 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-26 17:41:13 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-26 17:41:13 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 244)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 187)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-26 17:41:13 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-26 17:41:13 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:41:14 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:65
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  Rendered books/index.slim within layouts/application (Duration: 28.6ms | Allocations: 12272)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 34.0ms | Allocations: 15247)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 2.1ms | Allocations: 15598)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMjI5WiIsInB1ciI6ImJsb2Jfa2V5In19--83e2714c787cdaecb78c5d410f780b2e4dff0a3c/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:41:14 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjQ1OjM1LjIyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--144622aee1b87121a6daa09c9b60f7a138efb3ca/harry_potter.jpeg" for ::1 at 2024-08-26 17:41:14 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--f63743423e8a93079b70a13d36b16bd4656d868d/matilda.jpeg" for ::1 at 2024-08-26 17:41:14 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-26 17:41:14 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-26 17:41:14 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 260)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 214)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms | Allocations: 1719)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-26 17:41:14 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-26 17:41:14 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:41:23 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:65
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  Rendered books/index.slim within layouts/application (Duration: 33.9ms | Allocations: 12296)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 39.5ms | Allocations: 15271)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 1.3ms | Allocations: 15622)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMjI5WiIsInB1ciI6ImJsb2Jfa2V5In19--83e2714c787cdaecb78c5d410f780b2e4dff0a3c/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:41:23 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjQ1OjM1LjIyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--144622aee1b87121a6daa09c9b60f7a138efb3ca/harry_potter.jpeg" for ::1 at 2024-08-26 17:41:23 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--f63743423e8a93079b70a13d36b16bd4656d868d/matilda.jpeg" for ::1 at 2024-08-26 17:41:23 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-26 17:41:23 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-26 17:41:23 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 560)
+
+
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 199)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-26 17:41:23 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-26 17:41:23 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:41:25 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:21
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:65
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  Rendered books/index.slim within layouts/application (Duration: 101.8ms | Allocations: 76437)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 132.1ms | Allocations: 105090)
+Completed 200 OK in 150ms (Views: 132.4ms | ActiveRecord: 5.8ms | Allocations: 111186)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMjI5WiIsInB1ciI6ImJsb2Jfa2V5In19--83e2714c787cdaecb78c5d410f780b2e4dff0a3c/cat_in_hat.jpeg" for ::1 at 2024-08-26 17:41:25 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI2VDEyOjQ1OjM1LjIyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--144622aee1b87121a6daa09c9b60f7a138efb3ca/harry_potter.jpeg" for ::1 at 2024-08-26 17:41:25 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjZUMTI6NDU6MzUuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--f63743423e8a93079b70a13d36b16bd4656d868d/matilda.jpeg" for ::1 at 2024-08-26 17:41:25 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-26 17:41:25 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-26 17:41:25 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 548)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 213)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 183)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-26 17:41:26 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-26 17:41:26 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-26 17:41:47 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:21
+  Rendered books/index.slim within layouts/application (Duration: 39.8ms | Allocations: 48746)
+  Rendered layout layouts/application.slim (Duration: 40.2ms | Allocations: 48835)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 3.7ms | Allocations: 54918)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x0000000008f2a0>
+
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((f.label :title_or_author_name_cont, "Search by Keyword", class: "control-label"))).to_s)); 
+                                                                 ^):
+    35:       
+    36:                 div.col-md-4.col-sm-6
+    37:                   div.form-group
+    38:                     = f.label :title_or_author_name_cont, "Search by Keyword", class: "control-label"
+    39:                     = f.search_field :title_or_author_name_cont, class: "form-control", placeholder: "Search by Keyword"
+    40: 
+    41:                 div.col-md-3.col-sm-6
+  
+app/views/books/index.slim:38
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-29 12:35:17 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:21
+  Rendered books/index.slim within layouts/application (Duration: 75.6ms | Allocations: 64674)
+  Rendered layout layouts/application.slim (Duration: 76.0ms | Allocations: 64806)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 2.6ms | Allocations: 80651)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x00000000013718>
+
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((f.label :title_or_author_name_cont, "Search by Keyword", class: "control-label"))).to_s)); 
+                                                                 ^):
+    35:       
+    36:                 div.col-md-4.col-sm-6
+    37:                   div.form-group
+    38:                     = f.label :title_or_author_name_cont, "Search by Keyword", class: "control-label"
+    39:                     = f.search_field :title_or_author_name_cont, class: "form-control", placeholder: "Search by Keyword"
+    40: 
+    41:                 div.col-md-3.col-sm-6
+  
+app/views/books/index.slim:38
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-29 12:35:18 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:21
+  Rendered books/index.slim within layouts/application (Duration: 7.8ms | Allocations: 7973)
+  Rendered layout layouts/application.slim (Duration: 8.0ms | Allocations: 8056)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 8514)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x00000000013ab0>
+
+; @output_buffer.safe_concat(((::Temple::Utils.escape_html_safe((f.label :title_or_author_name_cont, "Search by Keyword", class: "control-label"))).to_s)); 
+                                                                 ^):
+    35:       
+    36:                 div.col-md-4.col-sm-6
+    37:                   div.form-group
+    38:                     = f.label :title_or_author_name_cont, "Search by Keyword", class: "control-label"
+    39:                     = f.search_field :title_or_author_name_cont, class: "form-control", placeholder: "Search by Keyword"
+    40: 
+    41:                 div.col-md-3.col-sm-6
+  
+app/views/books/index.slim:38
+app/controllers/books_controller.rb:37:in `show_genre'
+Started GET "/books/genre/kids" for ::1 at 2024-08-29 12:35:24 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:21
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:46
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:65
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:71
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:78
+  Rendered books/index.slim within layouts/application (Duration: 154.7ms | Allocations: 99209)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 202.6ms | Allocations: 137122)
+Completed 200 OK in 221ms (Views: 202.7ms | ActiveRecord: 6.7ms | Allocations: 143267)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--ed7de0f195165ddd49c639edc92f8c866540f5a0/cat_in_hat.jpeg" for ::1 at 2024-08-29 12:35:25 +0500
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTcsInB1ciI6ImJsb2JfaWQifX0=--7abbe2b17476caa0bc501c9f95995ad05d7a1f94/harry_potter.jpeg" for ::1 at 2024-08-29 12:35:25 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--ed7de0f195165ddd49c639edc92f8c866540f5a0", "filename"=>"cat_in_hat"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTcsInB1ciI6ImJsb2JfaWQifX0=--7abbe2b17476caa0bc501c9f95995ad05d7a1f94", "filename"=>"harry_potter"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[36m  Disk Storage (1.5ms) [0m[34mGenerated URL for file at key: bmhjxc6l8a3ix254uo0asl79x2mj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjlUMDc6NDA6MjUuNTIxWiIsInB1ciI6ImJsb2Jfa2V5In19--265b82f49452f0e6c401de59eefa13d9879e150a/cat_in_hat.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjlUMDc6NDA6MjUuNTIxWiIsInB1ciI6ImJsb2Jfa2V5In19--265b82f49452f0e6c401de59eefa13d9879e150a/cat_in_hat.jpeg
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 2qw66so3u3r1mar4d3539eikwtcg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI5VDA3OjQwOjI1LjUyNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a9807ed1670950ef98476c961cfad65ad8f0fb1b/harry_potter.jpeg)[0m
+Completed 302 Found in 13ms (ActiveRecord: 0.2ms | Allocations: 4753)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI5VDA3OjQwOjI1LjUyNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a9807ed1670950ef98476c961cfad65ad8f0fb1b/harry_potter.jpeg
+Completed 302 Found in 15ms (ActiveRecord: 1.8ms | Allocations: 4991)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjlUMDc6NDA6MjUuNTIxWiIsInB1ciI6ImJsb2Jfa2V5In19--265b82f49452f0e6c401de59eefa13d9879e150a/cat_in_hat.jpeg" for ::1 at 2024-08-29 12:35:25 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI5VDA3OjQwOjI1LjUyNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a9807ed1670950ef98476c961cfad65ad8f0fb1b/harry_potter.jpeg" for ::1 at 2024-08-29 12:35:25 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 396)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 157)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTgsInB1ciI6ImJsb2JfaWQifX0=--9c5ff52335cc327520ef0f83a9e970b77fe80a4a/matilda.jpeg" for ::1 at 2024-08-29 12:35:25 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MTgsInB1ciI6ImJsb2JfaWQifX0=--9c5ff52335cc327520ef0f83a9e970b77fe80a4a", "filename"=>"matilda"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 1b0j8gdnylijxkepgbinf8c3yskj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjlUMDc6NDA6MjUuNjA2WiIsInB1ciI6ImJsb2Jfa2V5In19--b2d171fdb8f8e0d92db120490ef7d7d0a063a543/matilda.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjlUMDc6NDA6MjUuNjA2WiIsInB1ciI6ImJsb2Jfa2V5In19--b2d171fdb8f8e0d92db120490ef7d7d0a063a543/matilda.jpeg
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1469)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjlUMDc6NDA6MjUuNjA2WiIsInB1ciI6ImJsb2Jfa2V5In19--b2d171fdb8f8e0d92db120490ef7d7d0a063a543/matilda.jpeg" for ::1 at 2024-08-29 12:35:25 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 157)
+
+
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-29 12:35:25 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-29 12:35:25 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-29 12:35:26 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-29 12:35:26 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-29 12:35:46 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:21
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:60
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:60
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:60
+  Rendered books/index.slim within layouts/application (Duration: 76.5ms | Allocations: 70270)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 103.0ms | Allocations: 98904)
+Completed 200 OK in 118ms (Views: 102.6ms | ActiveRecord: 5.2ms | Allocations: 105004)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjlUMDc6NDA6MjUuNTIxWiIsInB1ciI6ImJsb2Jfa2V5In19--265b82f49452f0e6c401de59eefa13d9879e150a/cat_in_hat.jpeg" for ::1 at 2024-08-29 12:35:47 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI5VDA3OjQwOjI1LjUyNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a9807ed1670950ef98476c961cfad65ad8f0fb1b/harry_potter.jpeg" for ::1 at 2024-08-29 12:35:47 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-29 12:35:47 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-29 12:35:47 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjlUMDc6NDA6MjUuNjA2WiIsInB1ciI6ImJsb2Jfa2V5In19--b2d171fdb8f8e0d92db120490ef7d7d0a063a543/matilda.jpeg" for ::1 at 2024-08-29 12:35:47 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 304 Not Modified in 54ms (ActiveRecord: 0.0ms | Allocations: 40014)
+
+
+Completed 304 Not Modified in 85ms (ActiveRecord: 0.0ms | Allocations: 56205)
+
+
+Completed 304 Not Modified in 70ms (ActiveRecord: 0.0ms | Allocations: 47568)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-29 12:35:49 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-29 12:35:49 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+Started GET "/books/genre/kids" for ::1 at 2024-08-29 12:36:05 +0500
+Processing by BooksController#show_genre as HTML
+  Parameters: {"genre"=>"kids"}
+  Rendering layout layouts/application.slim
+  Rendering books/index.slim within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "authors".* FROM "authors" INNER JOIN "books" ON "books"."author_id" = "authors"."id"[0m
+  ↳ app/views/books/index.slim:21
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "books".* FROM "books" WHERE "books"."genre" = ?[0m  [["genre", "Kids"]]
+  ↳ app/views/books/index.slim:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:60
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:60
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Book"], ["name", "cover_image"], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:53
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/books/index.slim:60
+  Rendered books/index.slim within layouts/application (Duration: 97.6ms | Allocations: 66519)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.slim:90
+  Rendered layout layouts/application.slim (Duration: 124.9ms | Allocations: 95156)
+Completed 200 OK in 146ms (Views: 125.3ms | ActiveRecord: 7.5ms | Allocations: 101230)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibWhqeGM2bDhhM2l4MjU0dW8wYXNsNzl4Mm1qIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiY2F0X2luX2hhdC5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnY2F0X2luX2hhdC5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjlUMDc6NDA6MjUuNTIxWiIsInB1ciI6ImJsb2Jfa2V5In19--265b82f49452f0e6c401de59eefa13d9879e150a/cat_in_hat.jpeg" for ::1 at 2024-08-29 12:36:05 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIycXc2NnNvM3UzcjFtYXI0ZDM1MzllaWt3dGNnIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaGFycnlfcG90dGVyLmpwZWdcIjsgZmlsZW5hbWUqPVVURi04JydoYXJyeV9wb3R0ZXIuanBlZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL2pwZWciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI0LTA4LTI5VDA3OjQwOjI1LjUyNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a9807ed1670950ef98476c961cfad65ad8f0fb1b/harry_potter.jpeg" for ::1 at 2024-08-29 12:36:05 +0500
+Started GET "/images/book-list-icons.png" for ::1 at 2024-08-29 12:36:05 +0500
+Started GET "/fonts/glyphicons-halflings-regular.html" for ::1 at 2024-08-29 12:36:05 +0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIxYjBqOGdkbnlsaWp4a2VwZ2JpbmY4YzN5c2tqIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwibWF0aWxkYS5qcGVnXCI7IGZpbGVuYW1lKj1VVEYtOCcnbWF0aWxkYS5qcGVnIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDgtMjlUMDc6NDA6MjUuNjA2WiIsInB1ciI6ImJsb2Jfa2V5In19--b2d171fdb8f8e0d92db120490ef7d7d0a063a543/matilda.jpeg" for ::1 at 2024-08-29 12:36:05 +0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cat_in_hat"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"harry_potter"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 208)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/images/book-list-icons.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.html"):
+  
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"matilda"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 895)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff" for ::1 at 2024-08-29 12:36:05 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for ::1 at 2024-08-29 12:36:06 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  

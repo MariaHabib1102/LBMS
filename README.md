@@ -141,9 +141,6 @@
 - **Notification System for Book Availability**:
   - Notify members when reserved books are available
 
-#### 5.3 Interlibrary Loan
-- **Integration with Other Libraries**:
-  - Borrow books from other libraries not available in the local collection
 
 #### 5.4 Digital Library
 - **Support for Electronic Resources**:

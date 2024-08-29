@@ -9,5 +9,13 @@ class Book < ApplicationRecord
     def already_liked?(book)
         self.likes.exists?(book_id: book.id)
     end
+
+    def self.ransackable_attributes(auth_object = nil)
+        ["title", "author_name", "published_date"] 
+    end
+    
+    def self.ransackable_associations(auth_object = nil)
+        ["author"]
+    end
 end
   

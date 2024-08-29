@@ -23,7 +23,7 @@ html
             figure style="text-align: center;"
               = image_tag 'signin-image.jpg', alt: 'Sign Up Image', class: 'signin-img'
             a.signup-image-link href=new_user_registration_path Create an account
-
+            a.signup-image-link href=new_user_password_path Forgot your password
           .col-md-6.signin-form
             h2.form-title Sign In
             = form_for(resource, as: resource_name, url: session_path(resource_name), method: :post, class: 'register-form', id: 'login-form') do |form|

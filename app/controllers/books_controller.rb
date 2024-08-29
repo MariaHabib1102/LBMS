@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    
+   
   end
 
   def show
@@ -31,6 +32,8 @@ class BooksController < ApplicationController
         allowed_genres = %w[kids horror comedy romance mystery]
         if allowed_genres.include?(@genre)
           @books = Book.where(genre: @genre.capitalize)
+          @q = @books.ransack(params[:q])
+          @books = @q.result(distinct: true)
           render 'books/index'
         else
           render plain: "Genre not found", status: :not_found
